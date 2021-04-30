@@ -1,3 +1,3 @@
-# 版权链项目域名
+# copyright chain project domain
 
-http://www.fs.video
+https://www.fs.video
