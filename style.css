@@ -729,3 +729,19 @@ a:hover {
 .site-footer-credits {
   color: #819198;
 }
+
+.friends {
+  font-size: 14px;
+}
+.friends a {
+  margin-right: 25px;
+}
+.logo {
+  margin-right: 15px;
+  display: inline-block;
+  width: 60px;
+  height: auto;
+  border-radius: 4px;
+  vertical-align: -12px;
+  background-color: #fff;
+}
