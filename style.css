@@ -472,10 +472,27 @@ a:hover {
   }
 }
 .page-header {
+  position: relative;
   color: #fff;
   text-align: center;
   background-color: #008ad4;
   background-image: linear-gradient(120deg, #155799, #008ad4);
+}
+.lang-btn {
+  position: absolute;
+  color: #fff;
+  font-size: 13px;
+  top: 20px;
+  right: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+.lang-btn:hover {
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 @media screen and (min-width: 64em) {
   .page-header {
