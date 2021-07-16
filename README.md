@@ -1,3 +1,3 @@
-# copyright chain project domain
+# File System Video project domain
 
 https://www.fs.video
