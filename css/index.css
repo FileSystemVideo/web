@@ -13,7 +13,17 @@
     background: url(../img/text.png) left top / 100% 100% no-repeat;
   }
   .ui-header {
+    width: 100%;
+    min-width: 1180px!important;
     height: 126px;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    background: #fff;
+  }
+  .ui-header.fixed {
+    position: fixed;
+    background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8));
   }
   .ui-header .header-box {
     width: 1200px;
@@ -49,9 +59,6 @@
     font-family: "AlibabaPuHuiTiR";
     color: #1C2436;
     line-height: 27px;
-  }
-  .ui-header .header-box .nav-box .nav-item.nav-item_active {
-    color: #135DFF;
   }
   .ui-header .header-box .nav-box .nav-item:hover {
     color: #135DFF;
@@ -1129,17 +1136,19 @@
     min-width: 100%;
   }
   .nav-toggle-box {
-    position: relative;
+    position: absolute;
+    right: 15px;
     width: 20px;
     height: 22px;
-    margin-right: 15px;
+    top: 50%;
+    margin-top: -11px;
   }
   .nav-toggle {
     display: inline-block;
     position: relative;
     width: 20px;
     height: 2px;
-    background-color: #fff;
+    background-color: #005BFF;
     transition-property: background-color, -webkit-transform;
     -webkit-transition-property: background-color, -webkit-transform;
     transition-property: background-color, transform;
@@ -1154,7 +1163,7 @@
     width: 100%;
     height: inherit;
     position: absolute;
-    background: #fff;
+    background: #005BFF;
     transition-property: margin, -webkit-transform;
     -webkit-transition-property: margin, -webkit-transform;
     transition-property: margin, transform;
@@ -1184,6 +1193,7 @@
   .ui-header .header-box,
   .banner-box .info-wrap {
     width: 100%;
+    position: relative;
   }
   .main {
     width: 100%!important;
@@ -1199,12 +1209,13 @@
   }
   .ui-header {
     height: 50px;
-    background: #005BFF;
+    background: #fff;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9;
+    min-width: 100%!important;
   }
   .ui-header .header-box {
     position: relative;
@@ -1218,7 +1229,7 @@
     position: absolute;
     top: 50px;
     display: block;
-    background: #005BFF;
+    background: #fff;
     width: 100%;
     display: none;
     z-index: 9;
@@ -1226,13 +1237,14 @@
   .ui-header .header-box .active ~ .nav-box {
     display: block;
   }
+  .en .ui-header .header-box .nav-box .nav-item,
   .ui-header .header-box .nav-box .nav-item,
   .ui-header .header-box .nav-box .nav-item.nav-item_active {
     display: block;
     margin: 0 0 0 15px;
     font-size: 14px;
     line-height: 46px;
-    color: #fff;
+    color: #333 !important;
   }
   .ui-content {
     margin-top: 50px;
@@ -1523,7 +1535,7 @@
   .ui-footer {
     height: auto;
     padding: 20px 0;
-    background: #135DFF;
+    background: #fff;
     margin: 30px 0 0 0;
   }
   .ui-footer .footer-box {
@@ -1569,10 +1581,6 @@
   .ui-footer .right-box {
     display: block;
     line-height: 30px;
-    color: #fff !important;
-  }
-  .ui-footer .right-box li a {
-    color: #fff !important;
   }
   .ui-footer .right-box .title {
     line-height: 46px;
@@ -1587,7 +1595,7 @@
     right: 0;
     top: 23px;
     position: absolute;
-    background: #fff;
+    background: #135DFF;
     transition-property: display, -webkit-transform;
     -webkit-transition-property: display, -webkit-transform;
     transition-property: display, transform;
@@ -1605,7 +1613,7 @@
     right: 0;
     top: 23px;
     position: absolute;
-    background: #fff;
+    background: #135DFF;
     transition-property: display, -webkit-transform;
     -webkit-transition-property: display, -webkit-transform;
     transition-property: display, transform;
@@ -1630,17 +1638,9 @@
     font-size: 13px;
     line-height: 30px;
   }
-  .ul a {
-    color: #fff !important;
-  }
   .ul a.title {
     margin-bottom: 0!important;
     line-height: 46px!important;
-  }
-  .ui-footer .left-box .btns .btn:last-child {
-    background: #fff;
-    color: #135DFF;
-    border: 1px solid #135DFF;
   }
 }
 @media screen and (max-width: 320px) {

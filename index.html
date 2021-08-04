@@ -20,11 +20,11 @@
           <div class="nav-toggle"></div>
         </div>
         <div class="nav-box">
-          <a class="nav-item lang nav-item_active" key="home">首页</a>
-          <a class="nav-item">FSV</a>
-          <a class="nav-item lang" key="advantage">优势</a>
-          <a class="nav-item lang" key="history">发展轨迹</a>
-          <a class="nav-item lang" key="route_map">路线图</a>
+          <a class="nav-item lang nav-item_active" key="home" href="/">首页</a>
+          <a class="nav-item" href="#fsv">FSV</a>
+          <a class="nav-item lang" key="advantage" href="#advantage">优势</a>
+          <a class="nav-item lang" key="history" href="#history">发展轨迹</a>
+          <a class="nav-item lang" key="route_map" href="#route_map">路线图</a>
           <button class="nav-item translate" id="en">English</button>
           <button class="nav-item translate" id="zh">中文</button>
         </div>
@@ -43,7 +43,7 @@
       </div>
       <div class="section1">
         <div class="main">
-          <div>
+          <div id="fsv">
             <div class="section-title-box ml-auto text-r">
               <div class="sub-title">ABOUT FSV</div>
               <div class="title lang" key="about_fsv">关于FSV</div>
@@ -52,7 +52,7 @@
               FSV （File System Vedio）是一个基于区块链的去中心化的视频文件系统，基于GOSSIP协议进行数据传输。FSV旨在为视频生成者提供一个去中心化的区块链视频发布环境，运用NFT技术铸造流媒体版权，通过DPOS机制进行治理，打造流媒体产业领域的链上经济新生态。FSV提供去中心化的版权注册、交易平台，按照注册时间戳固定版权所有人，并生成NFT区块链版权证书，通过去中心化的DPOS机制进行自我治理，解决全球流媒体版权领域中存在的各种问题，促使流媒体产业领域中各个环节的利益得以充分保障。
             </div>
           </div>
-          <div class="mt-280 pos-relative main-item2">
+          <div class="mt-280 pos-relative main-item2" id="advantage">
             <div class="section-title-box ml-auto text-r abs-r top-112">
               <div class="sub-title">INNOVATION</div>
               <div class="title lang" key="innovation">创新之处</div>
@@ -143,7 +143,7 @@
       </div>
       <div class="section3">
         <div class="main">
-          <div>
+          <div id="history">
             <div class="section-title-box">
               <div class="sub-title">DEVELOPMENT TRAJECTORY</div>
               <div class="title lang" key="history_title">发展轨迹</div>
@@ -192,7 +192,7 @@
               </div>
             </div>
           </div>
-          <div>
+          <div id="route_map">
             <div class="route-box">
               <div class="pic-box"></div>
               <div class="section-title-box top-224 right-127">
@@ -311,6 +311,14 @@
   </div>  
 </body>
 <script>
+  $(document).on('scroll', function () {
+    var scrollTop = $(this).scrollTop()
+    if (scrollTop >= 60) {
+        $(".ui-header").addClass('fixed');
+    } else {
+        $(".ui-header").removeClass('fixed');
+    }
+  })
   var lang = "zh";
   var arrLang = {
     zh: {},
@@ -344,10 +352,8 @@
   function showLang() {
     if('localStorage' in window){
       lang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
-      console.log(lang)
       if (!Object.keys(arrLang).includes(lang)) lang = 'en';
     }
-    console.log(lang, '2')
     $('#' + lang).hide()
     if (lang == 'en') {
       $('#zh').show()
