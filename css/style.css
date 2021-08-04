@@ -1,0 +1,61 @@
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.text-r {
+  text-align: right;
+}
+.text-c {
+  text-align: center;
+}
+.mt-32 {
+  margin-top: 32px;
+}
+.mt-280 {
+  margin-top: 280px;
+}
+.mr-227 {
+  margin-right: 227px;
+}
+.top-112 {
+  top: 112px;
+}
+.top-48 {
+  top: 48px;
+}
+.top-224 {
+  top: 224px;
+}
+.right-127 {
+  right: 127px;
+}
+.flex {
+  display: flex;
+}
+.abs-r {
+  position: absolute;
+  right: 0;
+}
+.abs-l {
+  position: absolute;
+  left: 0;
+}
+.pos-relative {
+  position: relative;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-around;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+a {
+  cursor: pointer;
+}
+.pr-180 {
+  padding-right: 180px!important;
+}

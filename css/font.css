@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "AlibabaPuHuiTiR";
+  src: url("./fonts/ALibabaPuHui-REGULAR.OTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Alibaba-PuHuiTi-H";
+  src: url("./fonts/ALibabaPuHuiH.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlibabaPuHuiTiB";
+  src: url("./fonts/ALibabaPuHui-BOLD.OTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlibabaPuHuiTiM";
+  src: url("./fonts/ALibabaPuHui-MEDIUM.OTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
