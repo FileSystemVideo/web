@@ -319,23 +319,21 @@
         $(".ui-header").removeClass('fixed');
     }
   })
-  var lang = "zh";
+  var lang = "en";
   var arrLang = {
     zh: {},
     en: {}
   }
   getJson()
-  showLang()
-  setTimeout(() => {
-    langChange()
-	}, 1000); 
-
+ 
   function getJson () {
     $.getJSON('./zh.json',data=>{
       arrLang.zh = data
     })
     $.getJSON('./en.json',data=>{
       arrLang.en = data
+      langChange()
+      showLang()
     })
   }
 
@@ -351,9 +349,13 @@
   }
   function showLang() {
     if('localStorage' in window){
-      lang = localStorage.getItem('lang') || navigator.language.slice(0, 2);
-      if (!Object.keys(arrLang).includes(lang)) lang = 'en';
+      // || navigator.language.slice(0, 2);
+      lang = localStorage.getItem('lang') 
+      if (!Object.keys(arrLang).includes(lang)) {
+        lang = 'en'
+      };
     }
+    console.log(lang)
     $('#' + lang).hide()
     if (lang == 'en') {
       $('#zh').show()
@@ -364,6 +366,7 @@
     $('.ui-wrapper').removeClass('en')
     $('.ui-wrapper').addClass(lang)
   }
+
   $(".translate").click(function() {
     var lang = $(this).attr("id");
     $('#' + lang).hide()
