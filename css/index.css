@@ -660,6 +660,7 @@
     height: 300px;
     position: relative;
     background: #FDFDFD;
+    overflow: hidden;
   }
   .ui-footer::after {
     width: 490px;
@@ -738,7 +739,7 @@
     justify-content: right;
   }
   .ui-footer .right-box .ul:not(:first-child) {
-    margin-left: 100px;
+    margin-left: 60px;
   }
   .ui-footer .right-box .ul a {
     display: block;
@@ -1646,4 +1647,55 @@
   .ui-footer .left-box .btns .btn {
     width: 135px!important;
   }
+}
+
+.downloads .btn {
+  margin-top: 28px;
+  width: 140px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid #135DFF;
+  font-size: 14px;
+  color: #135DFF;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+}
+.downloads .down-item {
+  position: relative;
+  height: 40px;
+  overflow: visible;
+}
+.downloads .link-box {
+  display: none;
+  position: absolute;
+  top: -20px;
+  left: 105%;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 8px;
+}
+.downloads .link-box.active {
+  display: block;
+}
+.downloads .link-box a {
+  display: block;
+  margin-bottom: 20px;
+  width: 120px;
+  height: 28px;
+  border-radius: 4px;
+  border: 1px solid #135DFF;
+  font-size: 14px;
+  color: #135DFF;
+  line-height: 26px;
+  text-align: center;
+  cursor: pointer;
+}
+.downloads .link-box a:last-child {
+  margin-bottom: 0;
+}
+.downloads .link-box a:hover {
+  background: #005BFF;
+  color: #fff;
 }
