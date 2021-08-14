@@ -1,4 +1,4 @@
-@media screen and (max-width: 2500px) {
+
   .ui-wrapper {
     position: relative;
   }
@@ -896,7 +896,7 @@
   .ui-footer {
     overflow-x: hidden;
   }
-}
+
 @media screen and (max-width: 1550px) {
   .ui-wrapper,
   .section1,
