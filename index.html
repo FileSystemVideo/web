@@ -7,35 +7,64 @@
 		<title>FSV</title>
 		<link rel="stylesheet" href="./css/base.css" />
 		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/index-pc.css" />
+		<link rel="stylesheet" href="./css/index-mobile.css" />
 		<script src="./js/jquery-1.8.js"></script>
 	</head>
 	<body>
 		<div class="ui-wrapper">
 			<header class="ui-header">
-				<div class="header-box">
+				<div class="header-box ui-header-pc">
+				  <div class="left">
+            <img src="./img/logo.png" alt="" class="logo" />
+            <div class="nav-box">
+              <a class="nav-item lang nav-item_active" key="首页" href="/">首页</a>
+              <a class="nav-item" href="#fsv">FSV</a>
+              <a class="nav-item lang" key="优势" href="#advantage">优势</a>
+              <a class="nav-item lang" key="发展轨迹" href="#history">发展轨迹</a>
+              <a class="nav-item lang" key="路线图" href="#route_map">路线图</a>
+            </div>
+          </div>
+          <div class="right">
+            <a class="downapp-btn" href="#footer">Download the app</a>
+            <ul class="">
+              <li class="js-translate-hover">
+                <div class="js-translate-text">简体中文</div>
+                <div class="translate-btns">
+                  <button class="nav-item translate" id="zh">简体中文</button>
+                  <button class="nav-item translate" id="en">English</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+				</div>
+
+
+        <div class="header-box ui-header-mobile">
 					<img src="./img/logo.png" alt="" class="logo" />
 					<div class="nav-toggle-box">
 						<div class="nav-toggle"></div>
 					</div>
 					<div class="nav-box">
-						<a class="nav-item lang nav-item_active" key="home" href="/">首页</a>
+						<a class="nav-item lang nav-item_active" key="首页" href="/">首页</a>
 						<a class="nav-item" href="#fsv">FSV</a>
-						<a class="nav-item lang" key="advantage" href="#advantage">优势</a>
-						<a class="nav-item lang" key="history" href="#history">发展轨迹</a>
-						<a class="nav-item lang" key="route_map" href="#route_map">路线图</a>
+						<a class="nav-item lang" key="优势" href="#advantage">优势</a>
+						<a class="nav-item lang" key="发展轨迹" href="#history">发展轨迹</a>
+						<a class="nav-item lang" key="路线图" href="#route_map">路线图</a>
 						<button class="nav-item translate" id="en">English</button>
 						<button class="nav-item translate" id="zh">中文</button>
 					</div>
 				</div>
+
+
 			</header>
 			<section class="ui-content">
 				<div class="banner-box">
 					<div class="info-wrap">
 						<div class="info-box">
 							<div class="fsv">FSV</div>
-							<div class="world_first lang" key="world_first">全球首家</div>
-							<div class="base_on_ipfs lang" key="based_on_ipfs">基于「 IPFS 」应用的星际视频公链</div>
+							<div class="world_first lang" key="全球首家">全球首家</div>
+							<div class="base_on_ipfs lang" key="基于「 IPFS 」应用的星际视频公链">基于「 IPFS 」应用的星际视频公链</div>
 						</div>
 					</div>
 				</div>
@@ -44,33 +73,37 @@
 						<div id="fsv">
 							<div class="section-title-box ml-auto text-r">
 								<div class="sub-title">ABOUT FSV</div>
-								<div class="title lang" key="about_fsv">关于FSV</div>
+								<div class="title lang" key="关于FSV">关于FSV</div>
 							</div>
-							<div class="text-box lang mt-32" key="paragraph1">
-								FSV （File System
-								Vedio）是一个基于区块链的去中心化的视频文件系统，基于GOSSIP协议进行数据传输。FSV旨在为视频生成者提供一个去中心化的区块链视频发布环境，运用NFT技术铸造流媒体版权，通过DPOS机制进行治理，打造流媒体产业领域的链上经济新生态。FSV提供去中心化的版权注册、交易平台，按照注册时间戳固定版权所有人，并生成NFT区块链版权证书，通过去中心化的DPOS机制进行自我治理，解决全球流媒体版权领域中存在的各种问题，促使流媒体产业领域中各个环节的利益得以充分保障。
+							<div class="text-box">
+								<p class="lang"  key="FSV （File System Video）是一个基于区块链的去中心化的视频文件系统，基于GOSSIP协议进行数据传输。FSV旨在为视频生成者提供一个去中心化的区块链视频发布环境，运用NFT技术铸造流媒体版权，通过DPOS机制进行治理，打造流媒体产业领域的链上经济新生态。">
+                  FSV （File System Video）是一个基于区块链的去中心化的视频文件系统，基于GOSSIP协议进行数据传输。FSV旨在为视频生成者提供一个去中心化的区块链视频发布环境，运用NFT技术铸造流媒体版权，通过DPOS机制进行治理，打造流媒体产业领域的链上经济新生态。
+                </p>
+                <p class="lang"  key="FSV提供去中心化的版权注册、交易平台，按照注册时间戳固定版权所有人，并生成NFT区块链版权证书，通过去中心化的DPOS机制进行自我治理，解决全球流媒体版权领域中存在的各种问题，促使流媒体产业领域中各个环节的利益得以充分保障。">
+                  FSV提供去中心化的版权注册、交易平台，按照注册时间戳固定版权所有人，并生成NFT区块链版权证书，通过去中心化的DPOS机制进行自我治理，解决全球流媒体版权领域中存在的各种问题，促使流媒体产业领域中各个环节的利益得以充分保障。
+                </p>
 							</div>
 						</div>
-						<div class="mt-280 pos-relative main-item2" id="advantage">
-							<div class="section-title-box ml-auto text-r abs-r top-112">
+						<div class="pos-relative main-item2" id="advantage">
+							<div class="section-title-box ml-auto text-r abs-r">
 								<div class="sub-title">INNOVATION</div>
-								<div class="title lang" key="innovation">创新之处</div>
+								<div class="title lang" key="创新之处">创新之处</div>
 							</div>
 							<div class="text-li-box">
-								<div class="text-li-title lang" key="streaming_media_ecosystem">流媒体生态系统</div>
-								<div class="li lang" key="paragraph2">
+								<div class="text-li-title lang" key="流媒体生态系统">流媒体生态系统</div>
+								<div class="li lang" key="FSV作为一个长期可持续的激励机制，激励所有利益相关者参与视频交付，完全分散。">
 									FSV作为一个长期可持续的激励机制，激励所有利益相关者参与视频交付，完全分散。
 								</div>
-								<div class="li lang pr-180" key="paragraph3">FSV是唯一的端到端平台，新的区块链，下一代点对点架构。</div>
+								<div class="li lang li-pr" key="FSV是唯一的端到端平台，新的区块链，下一代点对点架构。">FSV是唯一的端到端平台，新的区块链，下一代点对点架构。</div>
 							</div>
 							<div class="text-li-box bg-blue-box ml-auto">
-								<div class="text-li-title lang text-r" key="technological_progress">技术进步</div>
-								<div class="li lang text-r" key="paragraph4">为分散式视频传输技术创建的新一代原生区块链</div>
-								<div class="li lang text-r" key="paragraph5">
+								<div class="text-li-title lang" key="技术进步">技术进步</div>
+								<div class="li lang" key="为分散式视频传输技术创建的新一代原生区块链">为分散式视频传输技术创建的新一代原生区块链</div>
+								<div class="li lang" key="多层的BFT作为共识机制，聚合签名的Gossip协议（Aggregated Signature Gossip Scheme）面向资源的微支付池等创新技术">
 									多层的BFT作为共识机制，聚合签名的Gossip协议（Aggregated Signature Gossip
 									Scheme）面向资源的微支付池等创新技术
 								</div>
-								<div class="li lang text-r" key="paragraph6">
+								<div class="li lang" key="运用了IPFS同等的分布式存储技术，主要有语义网、强分发、微存储三个特点。把单个视频文件拆分成若干个256KB的分片，多片段多节点存储，从最近节点中按照距离进行排序，获取想要的分片">
 									运用了IPFS同等的分布式存储技术，主要有语义网、强分发、微存储三个特点。把单个视频文件拆分成若干个256KB的分片，多片段多节点存储，从最近节点中按照距离进行排序，获取想要的分片
 								</div>
 							</div>
@@ -79,26 +112,26 @@
 				</div>
 				<div class="section2">
 					<div class="main">
-						<div class="section-title-box abs-l top-48">
+						<div class="section-title-box">
 							<div class="sub-title">INTRODUCTION TO TECHNICAL FEATURES</div>
-							<div class="title lang" key="overview_of_fsv">FSV技术特征简介</div>
+							<div class="title lang" key="FSV技术特征简介">FSV技术特征简介</div>
 						</div>
 						<div>
 							<div class="text-box ipfs ml-auto">
 								<div class="txt">
-									<div class="text-box-title lang" key="ipfs_distributed_storage_underlying_technology">
+									<div class="text-box-title lang" key="IPFS分布式存储底层技术">
 										IPFS分布式存储底层技术
 									</div>
-									<div class="text-box-content lang" key="overview1">
+									<div class="text-box-content lang" key="FSV采用了IPFS分布式存储底层技术，将视频资源切割分片为256KB以下并加密生成乱码存储在不同带宽和硬盘中。">
 										FSV采用了IPFS分布式存储底层技术，将视频资源切割分片为256KB以下并加密生成乱码存储在不同带宽和硬盘中。
 									</div>
 								</div>
 								<img src="./img/001.png" alt="" class="pic" />
 							</div>
-							<div class="text-box nft mr-auto">
+							<div class="text-box nft mr-auto blue-bg">
 								<div class="txt">
-									<div class="text-box-title lang" key="nft_copyright_casting_technology">NFT版权铸造技术</div>
-									<div class="text-box-content lang" key="overview2">
+									<div class="text-box-title lang" key="NFT版权铸造技术">NFT版权铸造技术</div>
+									<div class="text-box-content lang" key="NFT又称非同质化代币，每个NFT拥有唯一的身份标识，且不可互换，使用NFT技术铸造版权，可使资源发布者的版权通过去中心化技术在FSV链上确权，永久保障其权益，解决链下版权的各种矛盾。">
 										NFT又称非同质化代币，每个NFT拥有唯一的身份标识，且不可互换，使用NFT技术铸造版权，可使资源发布者的版权通过去中心化技术在FSV链上确权，永久保障其权益，解决链下版权的各种矛盾。
 									</div>
 								</div>
@@ -106,18 +139,18 @@
 							</div>
 							<div class="text-box route ml-auto">
 								<div class="txt">
-									<div class="text-box-title lang" key="route_penetration_technology">路由穿透技术</div>
-									<div class="text-box-content lang" key="overview3">
+									<div class="text-box-title lang" key="路由穿透技术">路由穿透技术</div>
+									<div class="text-box-content lang" key="该技术可使IPFS网络的服务器既是服务端又是客户端，下载观看视频时为客户端，提供视频资源存储时为服务端，而且服务 器越多下载速度越快，真正实现端对端的高度去中心化。">
 										该技术可使IPFS网络的服务器既是服务端又是客户端，下载观看视频时为客户端，提供视频资源存储时为服务端，而且服务
 										器越多下载速度越快，真正实现端对端的高度去中心化。
 									</div>
 								</div>
 								<img src="./img/003.png" alt="" class="pic" />
 							</div>
-							<div class="text-box cdn mr-auto">
+							<div class="text-box cdn mr-auto blue-bg">
 								<div class="txt">
-									<div class="text-box-title lang" key="cdn_acceleration_technology">CDN加速技术</div>
-									<div class="text-box-content lang" key="overview4">
+									<div class="text-box-title lang" key="CDN加速技术">CDN加速技术</div>
+									<div class="text-box-content lang" key="解决了视频资源就近访问的问题，它可以使得用户检索下载视频资源时遵循就近分发原则，极大的提高了访问效率。">
 										解决了视频资源就近访问的问题，它可以使得用户检索下载视频资源时遵循就近分发原则，极大的提高了访问效率。
 									</div>
 								</div>
@@ -126,24 +159,24 @@
 						</div>
 					</div>
 					<div class="main2">
-						<div class="section-title-box mr-227 text-r">
+						<div class="section-title-box text-r">
 							<div class="sub-title">INTRODUCTION TO APPLICATION SCENARIOS</div>
-							<div class="title lang" key="introduction_to_fsv_application_scenarios">FSV应用场景简介</div>
+							<div class="title lang" key="FSV应用场景简介">FSV应用场景简介</div>
 						</div>
 						<div class="text-li-box ml-auto">
-							<img src="./img/005.png" alt="" class="pic-left" />
 							<div class="lis">
-								<div class="li lang" key="application1">用区块链技术 ，固定版权所有人</div>
-								<div class="li lang" key="application2">视频资源分片加密，生成乱码上链存储</div>
-								<div class="li lang" key="application3">建立更公平的加密视频分享平台社区</div>
-								<div class="li lang" key="application4">内容的哈希地址转化为文字标题，快速访问</div>
-								<div class="li lang" key="application5">分布式日志搜索引擎，可以让用户快速检索</div>
-								<div class="li lang" key="application6">更有效便捷的将视频文件上传至IPFS网络</div>
-								<div class="li lang application7" key="application7">
+								<div class="li lang" key="用区块链技术 ，固定版权所有人">用区块链技术 ，固定版权所有人</div>
+								<div class="li lang" key="视频资源分片加密，生成乱码上链存储">视频资源分片加密，生成乱码上链存储</div>
+								<div class="li lang" key="建立更公平的加密视频分享平台社区">建立更公平的加密视频分享平台社区</div>
+								<div class="li lang" key="内容的哈希地址转化为文字标题，快速访问">内容的哈希地址转化为文字标题，快速访问</div>
+								<div class="li lang" key="分布式日志搜索引擎，可以让用户快速检索">分布式日志搜索引擎，可以让用户快速检索</div>
+								<div class="li lang" key="更有效便捷的将视频文件上传至IPFS网络">更有效便捷的将视频文件上传至IPFS网络</div>
+								<div class="li lang application7" key="用区块链技术解决流媒体的盗版、抄袭、洗稿、标题党、低质量内容等一系列问题">
 									用区块链技术解决流媒体的盗版、抄袭、洗稿、标题党、低质量内容等一系列问题
 								</div>
-								<div class="li lang" key="application8">链下扫码 ，链上支付</div>
+								<div class="li lang" key="链下扫码 ，链上支付">链下扫码 ，链上支付</div>
 							</div>
+							<img src="./img/005.png" alt="" class="pic-left" />
 						</div>
 					</div>
 				</div>
@@ -152,37 +185,37 @@
 						<div id="history">
 							<div class="section-title-box">
 								<div class="sub-title">DEVELOPMENT TRAJECTORY</div>
-								<div class="title lang" key="history_title">发展轨迹</div>
+								<div class="title lang" key="发展轨迹标题">发展轨迹</div>
 							</div>
 							<div class="line-box">
 								<div class="pic-box">
 									<img src="./img/line1.png" alt="" class="line-pic" />
 								</div>
-								<div class="history-item history-item1 lang" key="history1">
+								<div class="history-item history-item1 lang" key="US NEPTUNE基金会正式成立，由美国知识产权联盟会员，分布式存储产权研究实验室核心成员、硅谷研究实验室开发者等行业顶尖人才组成。">
 									US
 									NEPTUNE基金会正式成立，由美国知识产权联盟会员，分布式存储产权研究实验室核心成员、硅谷研究实验室开发者等行业顶尖人才组成。
 								</div>
-								<div class="history-item history-item4 lang" key="history4">
+								<div class="history-item history-item4 lang" key="US NEPTUNE基金会，Blinkx在线视频，共同联合成立FSV星际视频实验室，开发FSV公链。">
 									US NEPTUNE基金会，Blinkx在线视频，共同联合成立FSV星际视频实验室，开发FSV公链。
 								</div>
-								<div class="history-item history-item2 lang" key="history2">
+								<div class="history-item history-item2 lang" key="公布视频预览与视频加速技术">
 									公布视频预览与视频加速技术
 								</div>
-								<div class="history-item history-item5 lang" key="history5">
+								<div class="history-item history-item5 lang" key="公布路由穿透技术">
 									公布路由穿透技术
 								</div>
-								<div class="history-item history-item3 lang" key="history3">
+								<div class="history-item history-item3 lang" key="优化视频分片存储传输协议">
 									优化视频分片存储传输协议
 								</div>
-								<div class="history-item history-item6 lang" key="history6">
+								<div class="history-item history-item6 lang" key="FSV测试网上线">
 									FSV测试网上线
 								</div>
 							</div>
 						</div>
-						<div class="mt-280">
-							<div class="section-title-box text-c">
+						<div id="partner">
+							<div class="section-title-box text-l">
 								<div class="sub-title">PARTNER</div>
-								<div class="title lang" key="partnership">合作伙伴</div>
+								<div class="title lang" key="合作伙伴">合作伙伴</div>
 							</div>
 							<div class="img-boxs">
 								<div class="img-box">
@@ -202,66 +235,66 @@
 						<div id="route_map">
 							<div class="route-box">
 								<div class="pic-box"></div>
-								<div class="section-title-box top-224 right-127">
+								<div class="section-title-box">
 									<div class="sub-title">ROUTE MAP</div>
-									<div class="title lang" key="route_map_title">路线图</div>
+									<div class="title lang" key="路线图标题">路线图</div>
 								</div>
 								<div class="route-item route-item1">
-									<div class="time lang" key="map1_title">2020年4—6月</div>
+									<div class="time lang" key="2020年4—6月">2020年4—6月</div>
 									<div class="content">
-										<div class="lang" key="map11">新增版权收益领取列表接口</div>
-										<div class="lang" key="map12">重做tx task；更新readme</div>
-										<div class="lang" key="map13">版权纠纷和版权质押部分接口</div>
-										<div class="lang" key="map14">增加 all_links命令</div>
-										<div class="lang" key="map15">p2p下载，保存数据库功能</div>
-										<div class="lang" key="map16">完善main启动代码和 gomod依赖</div>
+										<div class="lang" key="新增版权收益领取列表接口">新增版权收益领取列表接口</div>
+										<div class="lang" key="重做tx task；更新readme">重做tx task；更新readme</div>
+										<div class="lang" key="版权纠纷和版权质押部分接口">版权纠纷和版权质押部分接口</div>
+										<div class="lang" key="增加 all_links命令">增加 all_links命令</div>
+										<div class="lang" key="p2p下载，保存数据库功能">p2p下载，保存数据库功能</div>
+										<div class="lang" key="完善main启动代码和 gomod依赖">完善main启动代码和 gomod依赖</div>
 									</div>
 								</div>
 								<div class="route-item route-item2 no-shadow">
-									<div class="time lang" key="map2_title">2020年7—10月</div>
+									<div class="time lang" key="2020年7—10月">2020年7—10月</div>
 									<div class="content">
-										<div class="lang" key="map21">修复视频加密密码组padding</div>
-										<div class="lang" key="map22">文件上传时区分本地存储和链上名称</div>
-										<div class="lang" key="map23">重构上传文件时的文件处理</div>
-										<div class="lang" key="map24">新增转账搜索</div>
-										<div class="lang" key="map25">新增修改密码接口</div>
+										<div class="lang" key="修复视频加密密码组padding">修复视频加密密码组padding</div>
+										<div class="lang" key="文件上传时区分本地存储和链上名称">文件上传时区分本地存储和链上名称</div>
+										<div class="lang" key="重构上传文件时的文件处理">重构上传文件时的文件处理</div>
+										<div class="lang" key="新增转账搜索">新增转账搜索</div>
+										<div class="lang" key="新增修改密码接口">新增修改密码接口</div>
 									</div>
 								</div>
-								<div class="route-item route-item3 square-item">
-									<div class="time lang" key="map3_title">2020年11—12月</div>
+								<div class="route-item route-item3">
+									<div class="time lang" key="2020年11—12月">2020年11—12月</div>
 									<div class="content">
-										<div class="lang" key="map31">ipfs 功能开发 / 开启ipfs接口</div>
-										<div class="lang" key="map32">单独启动爬虫及ipfs服务 / 新增：删除完成的任务</div>
-										<div class="lang" key="map33">ipfs测试写入删除 / 错误信息添加及bug修改</div>
+										<div class="lang" key="ipfs 功能开发  / 开启ipfs接口">ipfs 功能开发  / 开启ipfs接口</div>
+										<div class="lang" key="单独启动爬虫及ipfs服务 / 新增：删除完成的任务">单独启动爬虫及ipfs服务 / 新增：删除完成的任务</div>
+										<div class="lang" key="ipfs测试写入删除  / 错误信息添加及bug修改">ipfs测试写入删除  / 错误信息添加及bug修改</div>
 									</div>
 								</div>
 								<div class="route-item route-item4 no-shadow">
-									<div class="time lang" key="map4_title">2021年1—3月</div>
+									<div class="time lang" key="2021年1—3月">2021年1—3月</div>
 									<div class="content">
-										<div class="lang" key="map41">从Github下载原始版本0.5.0和0.7.0</div>
-										<div class="lang" key="map42">ipfs取消屏蔽10和172网段的地址监听</div>
-										<div class="lang" key="map43">修改IpfsGateway端口号8080为11808</div>
-										<div class="lang" key="map44">还原quic-go版本；去掉10ip限制</div>
-										<div class="lang" key="map45">IPFS 0.5.0--->0.8.0 nat代码合并</div>
+										<div class="lang" key="从Github下载原始版本0.5.0和0.7.0">从Github下载原始版本0.5.0和0.7.0</div>
+										<div class="lang" key="ipfs取消屏蔽10和172网段的地址监听">ipfs取消屏蔽10和172网段的地址监听</div>
+										<div class="lang" key="修改IpfsGateway端口号8080为11808">修改IpfsGateway端口号8080为11808</div>
+										<div class="lang" key="还原quic-go版本；去掉10ip限制">还原quic-go版本；去掉10ip限制</div>
+										<div class="lang" key="IPFS 0.5.0--->0.8.0 nat代码合并">IPFS 0.5.0--->0.8.0 nat代码合并</div>
 									</div>
 								</div>
 								<div class="route-item route-item5">
-									<div class="time lang" key="map5_title">2021年4—5月</div>
+									<div class="time lang" key="2021年4—5月">2021年4—5月</div>
 									<div class="content">
-										<div class="lang" key="map51">还原quic-go版本</div>
-										<div class="lang" key="map52">去掉10ip限制</div>
-										<div class="lang" key="map53">ipfs取消屏蔽10和172网段的地址监听</div>
-										<div class="lang" key="map54">修改IpfsGateway端口号8080为11808</div>
+										<div class="lang" key="还原quic-go版本">还原quic-go版本</div>
+										<div class="lang" key="去掉10ip限制">去掉10ip限制</div>
+										<div class="lang" key="ipfs取消屏蔽10和172网段的地址监听">ipfs取消屏蔽10和172网段的地址监听</div>
+										<div class="lang" key="修改IpfsGateway端口号8080为11808">修改IpfsGateway端口号8080为11808</div>
 									</div>
 								</div>
 								<div class="route-item route-item6 no-shadow">
-									<div class="time lang" key="map6_title">2021年6—7月</div>
+									<div class="time lang" key="2021年6—7月">2021年6—7月</div>
 									<div class="content">
-										<div class="lang" key="map61">更新ipfs默认启动命令提示</div>
-										<div class="lang" key="map62">swarm 增加swarmContributes命令和接口</div>
-										<div class="lang" key="map63">ipfs http client增加查看贡献名单的接口</div>
-										<div class="lang" key="map64">修复AddrInfo->MarshalJSON的闪退问题</div>
-										<div class="lang" key="map65">ipfs pin模块 增加IsPinned的接口</div>
+										<div class="lang" key="更新ipfs默认启动命令提示">更新ipfs默认启动命令提示</div>
+										<div class="lang" key="swarm 增加swarmContributes命令和接口">swarm 增加swarmContributes命令和接口</div>
+										<div class="lang" key="ipfs http client增加查看贡献名单的接口">ipfs http client增加查看贡献名单的接口</div>
+										<div class="lang" key="修复AddrInfo->MarshalJSON的闪退问题">修复AddrInfo->MarshalJSON的闪退问题</div>
+										<div class="lang" key="ipfs pin模块 增加IsPinned的接口">ipfs pin模块 增加IsPinned的接口</div>
 									</div>
 								</div>
 							</div>
@@ -269,80 +302,79 @@
 					</div>
 				</div>
 			</section>
-			<section class="silde"></section>
-			<footer class="ui-footer">
+			<footer class="ui-footer" id="footer">
 				<div class="footer-box">
-					<div class="left-box">
-						<img src="./img/logo2.png" alt="" class="logo" />
-						<div class="btns">
-							<a href="" class="btn lang" key="open_source_community">FSV开源社区</a>
-						</div>
-					</div>
-					<div class="downloads">
-						<div class="down-item">
-							<div class="btn js-btn lang" key="下载PC客户端">下载PC客户端</div>
-							<div class="link-box js-links">
-								<a class="lang" key="China" href="#">亚洲</a>
-								<a class="lang" key="U.S.A" href="#">美洲</a>
-								<a class="lang" key="Europe" href="#">欧洲</a>
-							</div>
-						</div>
-            <div class="down-item">
-							<div class="btn js-btn lang" key="下载APP">下载APP</div>
-							<div class="link-box js-links">
-								<a class="lang" key="China" href="http://122.6.180.253:50321/bql_release_v21.08.16.apk">亚洲</a>
-								<a class="lang" key="U.S.A" href="#">美国</a>
-								<a class="lang" key="Europe" href="#">欧洲</a>
-							</div>
-						</div>
-					</div>
-					<div class="right-box">
-						<div class="ul">
-							<a class="title lang" key="help">帮助中心</a>
-							<div class="sub-title">
-								<a class="lang" key="newbie_help">新手帮助</a>
-								<a class="lang" key="privacy_policy">隐私政策</a>
-								<a class="lang" key="api_file">API文档</a>
-							</div>
-						</div>
-						<div class="ul">
-							<a class="title lang" key="terms">条款说明</a>
-							<div class="sub-title">
-								<a class="lang" key="user_agreement">用户协议</a>
-								<a class="lang" key="disclaimer">免责申明</a>
-								<a class="lang" key="privacy_clause">隐私条款</a>
-							</div>
-						</div>
-						<div class="ul">
-							<a class="title lang" key="about_us_footer">关于我们</a>
-							<div class="sub-title">
-								<a class="lang" key="contact_us">联系我们</a>
-								<a class="lang" key="join_us">加入我们</a>
-							</div>
-						</div>
-						<div class="ul">
-							<a class="title lang" key="community">社区</a>
-							<div class="sub-title">
-								<a class="lang" key="dianbao">(电报群)</a>
-								<a class="lang" key="(twitter)">(推特)</a>
-								<a class="">(TELEGRAM)</a>
-							</div>
-						</div>
-					</div>
+				  <div class="links">
+            <div class="left-box">
+              <img src="./img/logo2.png" alt="" class="logo" />
+              <div class="btns">
+                <a href="" class="btn lang" key="FSV开源社区">FSV开源社区</a>
+                <a href="" class="btn lang" key="下载白皮书">下载白皮书</a>
+              </div>
+            </div>
+            <div class="downloads">
+              <div class="down-item">
+                <div class="btn js-btn lang" key="下载PC客户端">下载PC客户端</div>
+                <div class="link-box js-links">
+                  <a class="lang" key="美国" href="http://122.6.180.253:50321/FSV-Setup-21.8.16.exe">美国</a>
+                  <a class="lang" key="欧洲" href="http://122.6.180.253:50321/FSV-Setup-21.8.16.exe">欧洲</a>
+                  <a class="lang" key="中国" href="http://122.6.180.253:50321/FSV-Setup-21.8.16.exe">中国</a>
+                </div>
+              </div>
+              <div class="down-item">
+                <div class="btn js-btn lang" key="下载APP">下载APP</div>
+                <div class="link-box js-links">
+                  <a class="lang" key="美国" href="http://122.6.180.253:50321/bql_release_v21.08.16.apk">美国</a>
+                  <a class="lang" key="欧洲" href="http://122.6.180.253:50321/bql_release_v21.08.16.apk">欧洲</a>
+                  <a class="lang" key="中国" href="http://122.6.180.253:50321/bql_release_v21.08.16.apk">中国</a>
+                </div>
+              </div>
+            </div>
+            <div class="right-box">
+              <div class="ul">
+                <a class="title lang" key="帮助中心">帮助中心</a>
+                <div class="sub-title">
+                  <a class="lang" key="新手帮助">新手帮助</a>
+                  <a class="lang" key="隐私政策">隐私政策</a>
+                  <a class="lang" key="API文档">API文档</a>
+                </div>
+              </div>
+              <div class="ul">
+                <a class="title lang" key="条款说明">条款说明</a>
+                <div class="sub-title">
+                  <a class="lang" key="用户协议">用户协议</a>
+                  <a class="lang" key="免责申明">免责申明</a>
+                  <a class="lang" key="隐私条款">隐私条款</a>
+                </div>
+              </div>
+              <div class="ul">
+                <a class="title lang" key="关于我们">关于我们</a>
+                <div class="sub-title">
+                  <a class="lang" key="联系我们">联系我们</a>
+                  <a class="lang" key="加入我们">加入我们</a>
+                </div>
+              </div>
+              <div class="ul">
+                <a class="title lang" key="社区">社区</a>
+                <div class="sub-title">
+                  <a class="lang" key="(电报群)">(电报群)</a>
+                  <a class="lang" key="(推特)">(推特)</a>
+                  <a class="">(TELEGRAM)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <img src="./img/footer_pic.png" alt="" class="footer-pic">
 				</div>
 			</footer>
 		</div>
 	</body>
 	<script>
-    $(function () {
-      $('.js-btn').on('click', function (e) {
-        e.stopPropagation()
-        $(this).parent().find('.link-box').toggleClass('active')
-      })
-      $(document).on('click', function () {
-        $('.js-links').removeClass('active')
-      })
+    // 切换语言按钮
+    $(document.body).on('click', '.js-translate-hover', function () {
+      $('.js-translate-hover .translate-btns').toggleClass('active')
     })
+    // 头部固定
 		$(document).on('scroll', function() {
 			var scrollTop = $(this).scrollTop()
 			if (scrollTop >= 60) {
@@ -351,21 +383,22 @@
 				$('.ui-header').removeClass('fixed')
 			}
 		})
+
+
 		var lang = 'en'
 		var arrLang = {
 			zh: {},
 			en: {},
 		}
 		getJson()
-
 		function getJson() {
 			$.getJSON('./zh.json', (data) => {
 				arrLang.zh = data
 			})
 			$.getJSON('./en.json', (data) => {
 				arrLang.en = data
-				langChange()
 				showLang()
+				langChange()
 			})
 		}
 
@@ -379,52 +412,55 @@
 		}
 		function showLang() {
 			if ('localStorage' in window) {
-				// || navigator.language.slice(0, 2);
 				lang = localStorage.getItem('lang')
 				if (!Object.keys(arrLang).includes(lang)) {
-					lang = 'en'
+					lang = 'zh'
 				}
-			}
-			console.log(lang)
-			$('#' + lang).hide()
-			if (lang == 'en') {
-				$('#zh').show()
-			} else {
-				$('#en').show()
 			}
 			$('.ui-wrapper').removeClass('zh')
 			$('.ui-wrapper').removeClass('en')
 			$('.ui-wrapper').addClass(lang)
+      if (lang === 'zh') {
+        $('.js-translate-text').text('简体中文')
+      } else {
+        $('.js-translate-text').text('English')
+      }
 		}
 
 		$('.translate').click(function() {
 			var lang = $(this).attr('id')
-			$('#' + lang).hide()
-			if (lang == 'en') {
-				$('#zh').show()
-			} else {
-				$('#en').show()
-			}
 			$('.ui-wrapper').removeClass('zh')
 			$('.ui-wrapper').removeClass('en')
 			$('.ui-wrapper').addClass(lang)
 			if ('localStorage' in window) {
 				localStorage.setItem('lang', lang)
 			}
+      if (lang === 'zh') {
+        $('.js-translate-text').text('简体中文')
+      } else {
+        $('.js-translate-text').text('English')
+      }
 			$('.lang').each(function(index, element) {
 				var text = arrLang[lang][$(element).attr('key')]
 				$(element).text(text)
 			})
 		})
+    // footer菜单
 		$(document.body).on('click', '.footer-box .right-box .title', function() {
 			var that = event.target || event.srcElement
-			if ($(that).hasClass('active')) {
-				$(that).removeClass('active')
-			} else {
-				$('.footer-box .right-box .title').removeClass('active')
-				$(that).addClass('active')
-			}
+			$(that).toggleClass('active')
 		})
+    $(function () {
+      $('.js-btn').on('click', function (e) {
+        e.stopPropagation()
+        $(this).toggleClass('active')
+        $(this).parent().find('.link-box').toggleClass('active')
+      })
+      $(document).on('click', function () {
+        $('.js-links').removeClass('active')
+      })
+    })
+    // header菜单
 		$(document.body).on('click', '.nav-toggle-box', function() {
 			var that = event.target || event.srcElement
 			$('.nav-toggle-box').toggleClass('active')
