@@ -90,8 +90,8 @@
   "联系我们": "Contact Us",
   "加入我们": "Join Us",
   "社区": "Community",
-  "(电报群)": "",
-  "(推特)": "(TWITTER)",
+  "电报群": "Telegraphs",
+  "推特": "Twitter",
   "下载PC客户端": "Download PC Client",
   "下载链接1": "Download Link 1",
   "下载链接2": "Download Link 2",
@@ -102,5 +102,6 @@
   "欧洲": "Europe",
   "中国": "China",
   "美洲": "America",
-  "亚洲": "Asia"
+  "亚洲": "Asia",
+  "下载客户端": "Download client"
 }
