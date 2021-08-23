@@ -862,7 +862,7 @@
   color: #1C2436;
   line-height: 20px;
 }
-.ui-footer .right-box .ul a:hover {
+.ui-footer .right-box .sub-title a:hover {
   color: #5613FF;
 }
 .ui-footer .right-box .ul a:not(:last-child) {
