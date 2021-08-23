@@ -862,6 +862,9 @@
   color: #1C2436;
   line-height: 20px;
 }
+.ui-footer .right-box .ul a:hover {
+  color: #5613FF;
+}
 .ui-footer .right-box .ul a:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -935,13 +938,17 @@
 }
 .ui-footer .downloads .link-box a {
   display: block;
-  color: #5613FF !important;
+  /* color: #5613FF !important; */
   width: 100px;
   height: 26px;
   border-radius: 7px;
   border: 1px solid #5613FF;
   text-align: center;
   line-height: 24px;
+}
+.ui-footer .downloads .link-box a:hover {
+  color: #fff;
+  background-color: #5613FF;
 }
 .ui-footer .downloads .link-box a:not(:last-child) {
   margin-bottom: 16px;

@@ -73,3 +73,11 @@ a {
 .li-pr {
   padding-right: 80px!important;
 }
+.en-show,
+.zh-show {
+  display: none;
+}
+.en .en-show,
+.zh .zh-show {
+  display: block;
+}

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+  <title>FSV</title>
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/index-pc.css" />
+  <link rel="stylesheet" href="./css/index-mobile.css" />
+  <link rel="stylesheet" href="./css/help.css" />
+  <script src="./js/jquery-1.8.js"></script>
+</head>
+
+<body>
+  <div class="ui-wrapper">
+    <header class="ui-header">
+      <div class="header-box ui-header-pc">
+        <div class="left">
+          <img src="./img/logo.png" alt="" class="logo" />
+          <div class="nav-box">
+            <a class="nav-item lang nav-item_active" key="首页" href="/">首页</a>
+            <!-- <a class="nav-item" href="#fsv">FSV</a>
+            <a class="nav-item lang" key="优势" href="#advantage">优势</a>
+            <a class="nav-item lang" key="发展轨迹" href="#history">发展轨迹</a>
+            <a class="nav-item lang" key="路线图" href="#route_map">路线图</a> -->
+          </div>
+        </div>
+        <div class="right">
+          <a class="downapp-btn lang" href="#footer" key="下载客户端">下载客户端</a>
+          <ul class="">
+            <li class="js-translate-hover">
+              <div class="js-translate-text">简体中文</div>
+              <div class="translate-btns">
+                <button class="nav-item translate" id="zh">简体中文</button>
+                <button class="nav-item translate" id="en">English</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="header-box ui-header-mobile">
+        <img src="./img/logo.png" alt="" class="logo" />
+        <div class="nav-toggle-box">
+          <div class="nav-toggle"></div>
+        </div>
+        <div class="nav-box">
+          <a class="nav-item lang nav-item_active" key="首页" href="/">首页</a>
+          <!-- <a class="nav-item" href="#fsv">FSV</a>
+          <a class="nav-item lang" key="优势" href="#advantage">优势</a>
+          <a class="nav-item lang" key="发展轨迹" href="#history">发展轨迹</a>
+          <a class="nav-item lang" key="路线图" href="#route_map">路线图</a> -->
+          <button class="nav-item translate" id="en">English</button>
+          <button class="nav-item translate" id="zh">中文</button>
+        </div>
+      </div>
+    </header>
+    <section class="ui-content">
+      <div class="banner-box">
+        <div class="info-wrap">
+          <div class="info-box">
+            <div class="fsv">FSV</div>
+            <div class="world_first lang" key="全球首家">全球首家</div>
+            <div class="base_on_ipfs lang" key="基于「 IPFS 」应用的星际视频公链">
+              基于「 IPFS 」应用的星际视频公链
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="help-wrap">
+        <h1 class="help-title lang" key="帮助中心">帮助中心</h1>
+        <div class="help-list en-show">
+          <dl>
+            <dt>1. How to create a wallet</dt>
+            <dd>
+              Click "Assets" → "Create Wallet", select the wallet type, enter the creation information, and create a wallet. <br>
+              Steps to create a wallet<br>
+              Set wallet name, wallet password, password prompt information<br>
+              Follow the prompts to save the wallet mnemonic<br>
+              Verify mnemonic words<br>
+              Created successfully<br>
+              Warm Reminder<br>
+              The mnemonic phrase (private key) is the only way to recover the wallet. Once lost, the assets cannot be retrieved. Please keep it safe! <br>
+              The mnemonic phrase should be backed up by physical media as much as possible, such as copying it on paper with a pen or using a fireproof, waterproof and anticorrosive "mnemonic secret box"
+              Etc. It is forbidden to take screenshots or take pictures to prevent leakage.
+            </dd>
+          </dl>
+          <dl>
+            <dt>2. How to import wallet</dt>
+            <dd>
+              Click "Assets" → "Import Wallet", select the wallet type, and import the wallet. <br>
+              Import wallet steps<br>
+              Enter wallet backup<br>
+              Set wallet password, password prompt information (optional)<br>
+              Click "Start Import"<br>
+              Warm Reminder<br>
+              If an error occurs during the import process, please refer to the tutorial. <br>
+              If the address is different after import, the imported mnemonic (private key) is wrong. <br>
+            </dd>
+          </dl>
+          <dl>
+            <dt>3. How to backup wallet</dt>
+            <dd>
+              Click "Assets" → "Select Wallet" and select the wallet to enter the management page to back up the wallet. <br>
+              Steps to backup wallet<br>
+              Click the "Backup Wallet" button<br>
+              Correctly copy the mnemonic phrase or private key according to the prompts<br>
+              Keep the mnemonic or private key in a safe place<br>
+              Warm Reminder<br>
+              The backup of the wallet is the only way to retrieve the assets, so it must be kept safe. <br>
+              The mnemonic has the same function as the private key. It is recommended to back up the mnemonic. <br>
+              It is recommended to use the mnemonic secret box to keep the mnemonic words<br>
+            </dd>
+          </dl>
+          <dl>
+            <dt>4. How to initiate a transfer</dt>
+            <dd>
+              How to initiate a transfer<br>
+              Open the asset wallet and select the currency to be transferred, click "Transfer", enter the transfer amount, the payment address, and complete the password verification.
+              Yes. <br>
+              How to initiate a collection<br>
+              Open the wallet, click on the wallet address at the top, and send the wallet address to the other party. <br>
+              Warm Reminder<br>
+              If the other party uses the FSV wallet to transfer money to you, just show the receiving QR code to the other party. <br>
+            </dd>
+          </dl>
+        </div>        
+        <div class="help-list zh-show">
+          <dl>
+            <dt>1、如何创建钱包</dt>
+            <dd>
+              点击「资产」→「创建钱包」，选择钱包类型，输入创建信息，创建钱包。<br>
+              创建钱包步骤<br>
+              设置钱包名称、钱包密码、密码提示信息<br>
+              根据提示保存钱包助记词<br>
+              验证助记词<br>
+              创建成功<br>
+              温馨提示<br>
+              助记词（私钥）是恢复钱包的唯一方式，一旦丢失，资产将无法找回，请务必安全保管！<br>
+              助记词尽可能采用物理介质备份，例如用笔抄在纸上或使用防火防水防腐蚀的「助记词密盒」
+              等，禁止截屏或者拍照，以防泄露。
+            </dd>
+          </dl>
+          <dl>
+            <dt>2、如何导入钱包</dt>
+            <dd>
+              点击「资产」→「导入钱包」，选择钱包类型，导入钱包。<br>
+              导入钱包步骤<br>
+              输入钱包备份<br>
+              设置钱包密码、密码提示信息（可选）<br>
+              点击「开始导入」<br>
+              温馨提示<br>
+              若导入过程中出现报错，请参考教程。<br>
+              若导入后地址不同，说明导入的助记词（私钥）是错误的。<br>
+            </dd>
+          </dl>
+          <dl>
+            <dt>3、如何备份钱包</dt>
+            <dd>
+              点击「资产」→「选择钱包」，选择钱包进入管理页面，即可备份钱包。<br>
+              备份钱包步骤<br>
+              点击「备份钱包」按钮<br>
+              根据提示正确抄写助记词或者私钥<br>
+              将助记词或者私钥保管在安全的地方<br>
+              温馨提示<br>
+              钱包的备份是找回资产的唯一途径，务必安全保管。<br>
+              助记词与私钥作用相同，推荐备份助记词。<br>
+              推荐使用助记词密盒保管助记词<br>
+            </dd>
+          </dl>
+          <dl>
+            <dt>4、如何发起转账</dt>
+            <dd>
+              何发起转账<br>
+              打开资产钱包选择要转账的币，点击「转账」，输入转账金额、收款地址，完成密码验证即
+              可。<br>
+              如何发起收款<br>
+              打开钱包，点击上方的钱包地址，将钱包地址发送给对方。<br>
+              温馨提示<br>
+              如果对方使用FSV钱包向你转账，向对方出示收款二维码即可。<br>
+            </dd>
+          </dl>
+        </div>
+    </section>
+    </section>
+    <footer class="ui-footer" id="footer">
+      <div class="footer-box">
+        <div class="links">
+          <div class="left-box">
+            <img src="./img/logo2.png" alt="" class="logo" />
+            <div class="btns">
+              <a ref="nofollow" target="_blank" href="https://github.com/FileSystemVideo/"
+                class="btn lang" key="FSV开源社区">FSV开源社区</a>
+              <a href="./book/FVS白皮书.pdf" download="FVS白皮书.pdf" class="btn zh-show">下载白皮书</a>
+              <a href="./book/FSV-White Paper.pdf" download="FSV-White Paper.pdf"
+                class="btn en-show">Download white paper</a>
+            </div>
+          </div>
+          <div class="downloads">
+            <div class="down-item">
+              <div class="btn js-btn lang" key="下载PC客户端">下载PC客户端</div>
+              <div class="link-box js-links">
+                <a class="lang" key="亚洲"
+                  href="http://122.6.180.253:50321/FSV-Setup-21.8.23.exe">亚洲</a>
+                <a class="lang" key="美洲"
+                  href="http://dsw3rxqm9wq1x.cloudfront.net/pc/FSV-Setup-21.8.23.exe">美洲</a>
+                <a class="lang" key="欧洲"
+                  href="http://d58qqi0wa6uyo.cloudfront.net/pc/FSV-Setup-21.8.23.exe">欧洲</a>
+              </div>
+            </div>
+            <div class="down-item">
+              <div class="btn js-btn lang" key="下载APP">下载APP</div>
+              <div class="link-box js-links">
+                <a class="lang" key="亚洲"
+                  href="http://122.6.180.253:50321/bql_release_v21.08.23.apk">亚洲</a>
+                <a class="lang" key="美洲"
+                  href="http://dsw3rxqm9wq1x.cloudfront.net/app/bql_release_v21.08.23.apk">美洲</a>
+                <a class="lang" key="欧洲"
+                  href="http://d58qqi0wa6uyo.cloudfront.net/app/bql_release_v21.08.23.apk">欧洲</a>
+              </div>
+            </div>
+          </div>
+          <div class="right-box">
+            <div class="ul">
+              <a href="./help.html" class="title lang" key="帮助中心">帮助中心</a>
+              <div class="sub-title">
+                <!-- <a class="lang" key="新手帮助">新手帮助</a> -->
+                <!-- <a class="lang" key="隐私政策">隐私政策</a>
+                  <a class="lang" key="API文档">API文档</a> -->
+              </div>
+            </div>
+            <!-- <div class="ul">
+                <a class="title lang" key="条款说明">条款说明</a>
+                <div class="sub-title">
+                  <a class="lang" key="用户协议">用户协议</a>
+                  <a class="lang" key="免责申明">免责申明</a>
+                  <a class="lang" key="隐私条款">隐私条款</a>
+                </div>
+              </div> -->
+            <div class="ul">
+              <a class="title lang" key="联系我们">联系我们</a>
+              <div class="sub-title">
+                <a href="mailto:fs.video3@gmail.com" class="lang" key="">
+                  fs.video3@gmail.com
+                </a>
+                <!-- <a class="lang" key="加入我们">加入我们</a> -->
+              </div>
+            </div>
+            <div class="ul">
+              <a class="title lang" key="社区">社区</a>
+              <div class="sub-title">
+                <a href="https://t.me/FsvVideo" ref="nofollow" target="_blank" class="lang"
+                  key="电报群">电报群</a>
+                <a href="https://twitter.com/FSV_fsvideo" ref="nofollow" target="_blank"
+                  class="lang" key="推特">推特</a>
+                <!-- <a href="mailto:fs.video3@gmail.com">E-mail</a> -->
+                <!-- <a href="https://t.me/FsvVideo"  ref="nofollow"  target="_blank">(TELEGRAM)</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="./img/footer_pic.png" alt="" class="footer-pic" />
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="./js/common.js"></script>
+<script>
+  $(function () {
+    $('.help-list').on('click', 'dt', function () {
+      $(this).parents('dl').toggleClass('active')
+    })
+  })
+</script>
+
+</html>

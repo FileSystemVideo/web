@@ -1,0 +1,92 @@
+.help-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.help-title {
+  margin: 30px 0;
+  padding-left: 42px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 40px;
+}
+
+.help-list {
+  padding: 40px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 16px 0px rgba(28, 31, 45, 0.16);
+  border-radius: 4px;
+}
+.help-list dl {
+  margin: 0;
+  border-bottom: 1px solid #EDF0F6;
+}
+.help-list dt {
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  user-select: none;
+  transition: 0.2s all;
+}
+
+.help-list dt::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/right-arr.png) no-repeat 50% 50%;
+  background-size: auto 100%;
+  transition: 0.2s all;
+}
+.help-list dd {
+  display: block;
+  margin: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  /* border-bottom: 1px solid #EDF0F6; */
+  font-size: 16px;
+  font-weight: 400;
+  color: #3E4D5C;
+  line-height: 2;
+  transition: 0.2s all;
+}
+.help-list dl.active dt{
+  font-size: 22px;
+}
+.help-list dl.active dt::after {
+  transform: rotate(90deg);
+}
+.help-list dl.active dd {
+  height: auto;
+  padding: 0 0 30px 0;
+}
+
+@media screen and (max-width: 640px) {
+  .help-title {
+    margin: 15px 0;
+    font-size: 24px;
+  }
+  .help-list {
+    margin: 0 20px;
+    padding: 20px;
+  }
+  .help-list dt {
+    height: 48px;
+    font-size: 16px;
+  }
+  .help-list dd {
+    font-size: 14px;
+  }
+  .help-list dl.active dt {
+    font-size: 18px;
+  }
+}
