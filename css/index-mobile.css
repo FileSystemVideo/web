@@ -440,11 +440,11 @@
     margin-bottom: 0;
   }
   .ui-footer .footer-box .left-box .btns .btn {
-    display: block!important;
+    /* display: block!important; */
     font-size: 12px;
     width: auto;
     padding: 0 10px;
-    width: auto!important;
+    /* width: auto!important; */
     height: 36px;
     line-height: 36px;
     border-radius: 8px;
