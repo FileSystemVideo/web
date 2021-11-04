@@ -22,7 +22,7 @@ $(function () {
 				url += area === 'Asia' ? winName : 'pc/' + winName
 				break
 			case 'app':
-				url += area === 'Asia' ? appName : 'app/' + winName
+				url += area === 'Asia' ? appName : 'app/' + appName
 				break
 			case 'linux':
 				url += 'linux/' + linuxName
