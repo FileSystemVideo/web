@@ -1,6 +1,6 @@
 var appName = 'bql_release_v21.11.06.sp1.apk'
 var winName = 'FSV-Setup-21.11.7.exe'
-var linuxName = 'fsv20211030.zip'
+var linuxName = 'fsv20211107.zip'
 $(function () {
 	$('.js-download').on('click', function () {
 		var url = ''
