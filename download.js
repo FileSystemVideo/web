@@ -20,10 +20,12 @@ $(function () {
 		}
 		switch (plat) {
 			case 'win':
-				url += area === 'Asia' ? winName : 'pc/' + winName
+				//url += area === 'Asia' ? winName : 'pc/' + winName
+				url += 'pc/' + winName
 				break
 			case 'app':
-				url += area === 'Asia' ? appName : 'app/' + appName
+				//url += area === 'Asia' ? appName : 'app/' + appName
+				url += 'app/' + appName
 				break
 			case 'linux':
 				url += 'linux/' + linuxName
