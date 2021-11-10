@@ -14,18 +14,18 @@ $(function () {
 				url += 'https://d58qqi0wa6uyo.cloudfront.net/'
 				break
 			default:
-				url += 'https://dsw3rxqm9wq1x.cloudfront.net/'
-				//url += 'http://123.132.234.66:10321/'
+				// url += 'https://dsw3rxqm9wq1x.cloudfront.net/'
+				url += 'http://123.132.234.66:10321/'
 				break
 		}
 		switch (plat) {
 			case 'win':
-				//url += area === 'Asia' ? winName : 'pc/' + winName
-				url += 'pc/' + winName
+				url += area === 'Asia' ? winName : 'pc/' + winName
+				// url += 'pc/' + winName
 				break
 			case 'app':
-				//url += area === 'Asia' ? appName : 'app/' + appName
-				url += 'app/' + appName
+				url += area === 'Asia' ? appName : 'app/' + appName
+				// url += 'app/' + appName
 				break
 			case 'linux':
 				url += 'linux/' + linuxName
