@@ -15,7 +15,7 @@ $(function () {
 				break
 			default:
 				url += 'https://dsw3rxqm9wq1x.cloudfront.net/'
-				//url += 'http://123.132.234.66:50321/'
+				//url += 'http://123.132.234.66:10321/'
 				break
 		}
 		switch (plat) {
