@@ -1,6 +1,9 @@
-var appName = 'bql_release_v21.11.06.sp1.apk'
-var winName = 'FSV-Setup-21.11.18.exe'
-var linuxName = 'fsv20211107.zip'
+var appVersion = '21.11.06.sp1'
+var winVersion = '21.11.18'
+var linuxVersion = '20211107'
+var appName = 'bql_release_v' + appVersion + '.apk'
+var winName = 'FSV-Setup-' + winVersion + '.exe'
+var linuxName = 'fsv' + linuxVersion + '.zip'
 $(function () {
 	$('.js-download').on('click', function () {
 		var url = ''
@@ -14,7 +17,6 @@ $(function () {
 				url += 'https://d58qqi0wa6uyo.cloudfront.net/'
 				break
 			default:
-				// url += 'https://dsw3rxqm9wq1x.cloudfront.net/'
 				url += 'http://123.132.234.66:10321/'
 				break
 		}
@@ -33,4 +35,20 @@ $(function () {
 		}
     window.location = url
 	})
+  $('.js-version').each(function() {
+    var plat = $(this).attr('data-plat')
+    var text = ''
+    switch (plat) {
+			case 'win':
+				text = winVersion
+				break
+			case 'app':
+				text = appVersion
+				break
+			case 'linux':
+				text = linuxVersion
+				break
+    }
+    $(this).text('版本号: ' + text)
+  })
 })

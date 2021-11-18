@@ -916,7 +916,7 @@
   display: none;
   position: absolute;
   width: 150px;
-  height: 140px;
+  padding: 12px 0;
   background: #FFFFFF;
   border-radius: 7px;
   border: 1px solid #5613FF;
@@ -936,6 +936,11 @@
   -ms-flex-align: center;
   align-items: center;
   z-index: 2;
+}
+.ui-footer .downloads .version {
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-align: left;
 }
 .ui-footer .downloads .link-box a {
   display: block;
