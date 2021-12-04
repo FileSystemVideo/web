@@ -22,7 +22,7 @@ $(function () {
 				break
 		}
 		switch (plat) {
-			case 'win':zxsa
+			case 'win':
 				// url += area === 'Asia' ? winName : 'pc/' + winName
 				url += 'pc/' + winName
 				break
