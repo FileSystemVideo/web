@@ -1,5 +1,5 @@
 var appVersion = '21.11.24'
-var winVersion = '21.11.22'
+var winVersion = '21.12.3'
 var linuxVersion = '20211203'
 var appName = 'bql_release_v' + appVersion + '.apk'
 var winName = 'FSV-Setup-' + winVersion + '.exe'
@@ -22,7 +22,7 @@ $(function () {
 				break
 		}
 		switch (plat) {
-			case 'win':
+			case 'win':zxsa
 				// url += area === 'Asia' ? winName : 'pc/' + winName
 				url += 'pc/' + winName
 				break
