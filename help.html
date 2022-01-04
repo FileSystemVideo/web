@@ -333,6 +333,10 @@
                   </code>
               <h3>Safe and stable operation</h3>
               <p>It is recommended to deploy a supervisor to monitor the process of FSV. It can also be restarted automatically after an unexpected exit</p>
+              <p>If the following error occurs, it means that the libaio library is not installed. </p>
+               <pre>error while loading shared libraries: libaio.so.1: cannot open shared object file: No such file or directory</pre>
+               <p>You need to run the command separately to install this library:</p>
+               <pre>yum install libaio -y</pre>
             </dd>
           </dl>
         </div>
@@ -459,6 +463,10 @@
                   </code>
  <h3>安全稳定运行</h3>
               <p>建议部署Supervisor对fsv的进程进行监控,意外退出后也可以自动重启</p>
+              <p>如果出现以下错误，说明没有安装libaio的库。</p>
+              <pre>error while loading shared libraries: libaio.so.1: cannot open shared object file: No such file or directory</pre>
+              <p>需要单独运行命令进行安装这个库：</p>
+              <pre>yum install libaio -y</pre>
             </dd>
           </dl>
         </div>
