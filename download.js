@@ -50,6 +50,6 @@ $(function () {
 				text = linuxVersion
 				break
     }
-    $(this).text('版本号: ' + text)
+    $(this).text('Version: ' + text)
   })
 })
