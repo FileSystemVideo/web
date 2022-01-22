@@ -470,6 +470,72 @@
             </dd>
           </dl>
         </div>
+
+        <h1 class="help-title  en-show">Open Node Interface Function Description</h1>
+        <div class="help-list en-show">
+          <dl>
+              <dt>1.Configuration process in Windows environment (take Windows10 system as an example)</dt>
+              <dd>
+                Select "This PC", right-click and select "Properties". <br>
+                Click "Advanced System Settings"<br>
+                Then click "Environment Variables" under "Advanced"<br>
+                In System Variables, select New<br>
+                Fill in the variable name FSV_OPEN_API, the variable value 1, and then click OK<br>
+                Go back and click OK<br>
+                Restart the program to take effect<br>
+              </dd>
+          </dl>
+          <dl>
+            <dt>2.Configuration process in Linux environment (CentOS)</dt>
+            <dd>
+              <p>Move to this directory cd /etc/profile.d/</p>
+              <code>cd /etc/profile.d/</code>
+              <br>
+              <p>Create a file</p>
+              <code>vi fsv.sh</code>
+              <br>
+              <p>write file content</p>
+              <code>export FSV_OPEN_API=1</code>
+              <p>make the file valid</p>
+              <code>
+                source ./fsv.sh
+              </code>
+              <p>restart the program</p>          
+            </dd>
+        </dl>
+        </div>
+        <h1  class="help-title zh-show">开放节点接口功能说明</h1>
+
+        <div class="help-list zh-show">
+          <dl>
+            <dt>1、Windows环境下配置流程（以Windows10系统为例）</dt>
+            <dd>
+                选中“此电脑”，右键选择“属性”。<br>
+                点击“高级系统设置<br>
+                接着点击“高级”下的“环境变量”<br>
+                在系统变量中，选择 “新建”<br>
+                填入变量名 FSV_OPEN_API，变量值1，然后点击确定<br>
+                返回后再点击确定<br>
+                重启程序生效<br>
+          
+              </dd>
+          </dl>
+          <dl>
+            <dt>2、Linux环境下配置流程（CentOS）</dt>
+            <dd>
+                <p>移动到此目录下 cd /etc/profile.d/</p>
+                <code> /etc/profile.d/</code>  <br>
+                <p>创建文件</p>
+                <code>vi fsv.sh</code>
+                <p>写入文件内容</p>
+                <code>export FSV_OPEN_API=1</code>
+                <p>使文件生效</p>
+                <code>source ./fsv.sh</code>
+                <p>重启程序</p>
+            </dd>
+          </dl>
+        </div>        
+      </div>
     </section>
     </section>
     <footer class="ui-footer" id="footer">
@@ -530,6 +596,7 @@
               <div class="sub-title">
                 <a href="./help.html#help-new" class="lang" key="新手帮助">新手帮助</a>
                 <a href="./help.html#help-dpos" class="lang" key="DPoS 教程">DPoS 教程</a>
+                <!-- <a href="./help.html#help-node" class="lang" key="开放节点接口功能说明">开放节点接口功能说明</a> -->
                 <!-- <a class="lang" key="隐私政策">隐私政策</a>
                   <a class="lang" key="API文档">API文档</a> -->
               </div>
