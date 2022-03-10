@@ -576,8 +576,8 @@
   background: url(../img/003.png) center center / cover no-repeat;
 }
 .section3 .line-box .line-pic {
-  width: 1335px;
-  height: 311px;
+  width: 1461px;
+  height: 290px;
   display: block;
   margin: 0 auto;
 }
@@ -587,65 +587,19 @@
   font-family: "AlibabaPuHuiTiR";
   color: #1C2436;
   line-height: 28px;
+  max-width: 230px;
+  word-break: break-all;
 }
-.section3 .line-box .history-item::before {
-  position: absolute;
+.section3 .line-box .text-r {
+  text-align: right;
+}
+.section3 .line-box .time {
   display: block;
   font-size: 32px;
   font-family: DIN-BlackItalic, DIN;
   font-weight: normal;
   color: #1C2436;
-  line-height: 39px;
-  top: -64px;
-  left: 0;
-}
-.section3 .line-box .history-item1 {
-  top: 217px;
-  left: 140px;
-  width: 230px;
-}
-.section3 .line-box .history-item1::before {
-  content: '2018.10';
-}
-.section3 .line-box .history-item2 {
-  top: 292px;
-  left: 511px;
-}
-.section3 .line-box .history-item2::before {
-  content: '2019.09';
-  left: auto;
-  right: 0;
-}
-.section3 .line-box .history-item3 {
-  top: 199px;
-  right: 354px;
-}
-.section3 .line-box .history-item3::before {
-  left: auto;
-  right: 0;
-  content: '2021.03';
-}
-.section3 .line-box .history-item4 {
-  top: 509px;
-  left: 399px;
-  width: 297px;
-}
-.section3 .line-box .history-item4::before {
-  content: '2019.03';
-}
-.section3 .line-box .history-item5 {
-  top: 480px;
-  left: 906px;
-}
-.section3 .line-box .history-item5::before {
-  content: '2020.06';
-}
-.section3 .line-box .history-item6 {
-  top: 398px;
-  right: 60px;
-}
-.section3 .line-box .history-item6::before {
-  content: '2021.07';
+  line-height: 40px;
 }
 .section3 #partner {
   width: 1400px;
@@ -847,10 +801,9 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-  -webkit-justify-content: right;
-  -ms-flex-pack: right;
-  justify-content: right;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
 }
 .ui-footer .right-box .ul:not(:first-child) {
   margin-left: 55px;
@@ -901,7 +854,8 @@
 .ui-footer .downloads .btn {
   width: 185px;
   height: 46px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 7px;
   border: 1px solid #5613FF;
   font-size: 14px;

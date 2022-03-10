@@ -366,10 +366,11 @@
     font-size: 14px;
     line-height: 24px;
   }
-  .section3 .line-box .history-item::before {
+  .section3 .line-box .history-item .time {
+    position: absolute;
+    left: 0;
     top: -40px;
     font-size: 25px;
-    left: 0!important;
   }
   .section3 #partner {
     margin-top: 70px;
