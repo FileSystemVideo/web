@@ -1,4 +1,4 @@
-var appVersion = '22.03.11'
+var appVersion = '22.04.01'
 var winVersion = '22.3.11'
 var linuxVersion = '22.03.11'
 var appName = 'bql_release_v' + appVersion + '.apk'
