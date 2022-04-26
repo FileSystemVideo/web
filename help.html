@@ -476,6 +476,7 @@
           <dl>
               <dt>1.Configuration process in Windows environment (take Windows10 system as an example)</dt>
               <dd>
+                Method 1:<br>
                 Select "This PC", right-click and select "Properties". <br>
                 Click "Advanced System Settings"<br>
                 Then click "Environment Variables" under "Advanced"<br>
@@ -484,10 +485,17 @@
                 Go back and click OK<br>
                 Restart the program to take effect<br>
               </dd>
+            <dd>
+                Method 2:<br>
+                Modify FSV in the directory where the program is located Toml, set under [open_api] <br>
+Changed enabled = false to enabled = true <br>
+Restart the program to take effect <br>
+              </dd>
           </dl>
           <dl>
             <dt>2.Configuration process in Linux environment (CentOS)</dt>
             <dd>
+              <p>Method 1:</p>
               <p>Move to this directory cd /etc/profile.d/</p>
               <code>cd /etc/profile.d/</code>
               <br>
@@ -502,6 +510,12 @@
               </code>
               <p>restart the program</p>          
             </dd>
+            <dd>
+               <p>Method 2:</p>
+                <p>Modify FSV in the directory where the program is located Toml, set under [open_api] </p>
+<p>Changed enabled = false to enabled = true </p>
+<p>Restart the program to take effect </p>
+              </dd>
         </dl>
         </div>
         <h1  class="help-title zh-show">开放节点接口功能说明</h1>
@@ -510,6 +524,7 @@
           <dl>
             <dt>1、Windows环境下配置流程（以Windows10系统为例）</dt>
             <dd>
+                方法1:<br>
                 选中“此电脑”，右键选择“属性”。<br>
                 点击“高级系统设置<br>
                 接着点击“高级”下的“环境变量”<br>
@@ -519,10 +534,17 @@
                 重启程序生效<br>
           
               </dd>
+             <dd>
+                方法2:<br>
+                修改程序所在目录下的fsv.toml,将 [open_api] 下的 <br>
+                 enabled = false  改为 enabled = true <br>
+                重启程序生效<br>
+              </dd>
           </dl>
           <dl>
             <dt>2、Linux环境下配置流程（CentOS）</dt>
             <dd>
+                <p>方法1:</p>
                 <p>移动到此目录下 cd /etc/profile.d/</p>
                 <code> /etc/profile.d/</code>  <br>
                 <p>创建文件</p>
@@ -533,6 +555,12 @@
                 <code>source ./fsv.sh</code>
                 <p>重启程序</p>
             </dd>
+            <dd>
+                <p>方法2:</p>
+<p>修改程序所在目录下的fsv.toml,将 [open_api] 下的 </p>
+                 <p>enabled = false  改为 enabled = true </p>
+                <p>重启程序生效</p>
+              </dd>
           </dl>
         </div>        
       </div>
