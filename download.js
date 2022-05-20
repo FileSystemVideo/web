@@ -1,4 +1,4 @@
-var appVersion = '22.05.14'
+var appVersion = '22.05.20'
 var winVersion = '22.4.11'
 var linuxVersion = '22.05.10'
 var appName = 'bql_release_v' + appVersion + '.apk'
@@ -17,7 +17,6 @@ $(function () {
 				url += 'https://d58qqi0wa6uyo.cloudfront.net/'
 				break
 			default:
-				// url += 'http://123.132.234.66:10321/'
 				url += 'https://dsw3rxqm9wq1x.cloudfront.net/'
 				break
 		}
