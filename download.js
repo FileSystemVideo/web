@@ -1,5 +1,5 @@
 var appVersion = '22.05.20'
-var winVersion = '22.4.11'
+var winVersion = '22.6.1'
 var linuxVersion = '22.06.01'
 var appName = 'bql_release_v' + appVersion + '.apk'
 var winName = 'FSV-Setup-' + winVersion + '.exe'
