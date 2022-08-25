@@ -293,13 +293,16 @@
               </code>
               <br>
               <p>After that, you will be prompted to enter the mnemonic, and after confirmation, the confirmation parameter prompt will be printed. At this time, entering y will initiate a request to create a dpos node on the chain of the current dpos node. </p>
+              <p>Note:</p>
+              <p>1. You need to wait for the block of the current node to be synchronized to the latest before you can operate, otherwise it will fail</p>
+              
               <h3>POS lifted ban</h3>
               <code>./fsv dpos unjail</code>
               <p>After that, you will be prompted to enter the mnemonic phrase, and after confirmation, a request for on-chain unblocking of the current dpos node will be initiated. </p>
               <p>Note:</p>
               <p>1. The mnemonic must be the creator of the dpos node</p>
               <p>2. Only support the lifting of the current dpos node</p>
-
+              <p>3. You need to wait for the block of the current node to be synchronized to the latest before you can operate, otherwise it will fail</p>
               <h3>Check the running status</h3>
               <code>./fsv status</code>
 
@@ -427,12 +430,16 @@
               </code>
               <br>
               <p>之后会提示输入助记词,确认后会打印确认参数提示，此时输入y会发起对当前dpos节点的链上创建dpos节点请求。</p>
+              <p>注意：</p>
+              <p>1.需要等待当前节点的区块同步到最新之后才可以进行操作,不然的话会失败</p>
+              
               <h3>POS 解禁</h3>
               <code>./fsv dpos unjail</code>
               <p>之后会提示输入助记词,确认后会发起对当前dpos节点的链上解禁请求。</p>
               <p>注意：</p>
               <p>1.助记词必须为dpos节点的创建者</p>
               <p>2.只支持解禁当前dpos节点</p>
+              <p>3.需要等待当前节点的区块同步到最新之后才可以进行操作,不然的话会失败</p>
 
               <h3>查看运行状态</h3>
               <code>./fsv status</code>
