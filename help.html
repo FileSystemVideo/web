@@ -253,7 +253,7 @@
 
               <p>Unzip the installation package to a partition with a larger remaining capacity. </p>
               <code>
-                unzip fsv.zip
+                unzip fsv.zip  or  unzip fsv****.zip
               </code>
               <p>Enter the directory</p>
               <code>
@@ -261,7 +261,7 @@
               </code>
               <p>Increase execution permissions</p>
               <code>
-                chmod u+x op.sh fsv ipfs.exe db/bin/fsv-db
+                chmod u+x op.sh fsv fsv_daemon ipfs chain fs-repo-9-to-10 fs-repo-10-to-11 db/bin/fsv-db
               </code>
               <p>Start the program</p>
 
@@ -269,7 +269,7 @@
               <p>Stop the program</p>
               <code>./op.sh stop</code>
               <p>View running log</p>
-              <code>tail -f fsv.log</code>
+              <code>tail -f daemon.log</code>
               <h3>Apply for POS mining</h3>
               <code>
                 ./fsv dpos create
@@ -383,7 +383,7 @@
 
               <p>将安装包解压到剩余容量较大的分区。</p>
               <code>
-                unzip fsv.zip
+                unzip fsv.zip 或者 unzip fsv****.zip
               </code>
               <p>进入目录</p>
               <code>
@@ -391,7 +391,7 @@
               </code>
               <p>增加执行权限</p>
               <code>
-                chmod u+x op.sh fsv ipfs.exe db/bin/fsv-db
+                chmod u+x op.sh fsv fsv_daemon ipfs chain fs-repo-9-to-10 fs-repo-10-to-11 db/bin/fsv-db
               </code>
               <p>启动程序</p>
 
@@ -399,7 +399,7 @@
               <p>停止程序</p>
               <code>./op.sh stop</code>
               <p>查看运行日志</p>
-              <code>tail -f fsv.log</code>
+              <code>tail -f daemon.log</code>
               <h3>申请POS挖矿</h3>
               <code>
                 ./fsv dpos create
