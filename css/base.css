@@ -126,6 +126,10 @@ samp {
     font-size: 1em;
 }
 
+code{
+	color: #0007ef;
+}
+
 button,
 input,
 optgroup,
