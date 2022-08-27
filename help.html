@@ -385,39 +385,71 @@
             <dt>2、Linux搭建 DPoS 节点的教程</dt>
             <dd>
               <h3>电脑配置要求</h3>
-              4核8G内存，1000G以上可用磁盘分区剩余空间，出口带宽10m以上<br>
+              4核8G内存，500G以上可用磁盘分区剩余空间，出口带宽10m以上<br>
               保持外网tcp端口26656处于开放状态<br>
 
               <h3>操作系统要求</h3>
               centos<br>
 
               <h3>安装说明</h3>
-              <p>首先登录官网 fs.video 下载linux节点程序压缩包。</p>
-
-              <p>将安装包解压到剩余容量较大的分区。</p>
-              <code>
-                unzip fsv.zip 或者 unzip fsv****.zip
+			  <p>1.查看磁盘挂载路径/data的容量是否大于等于 500G</p>
+			  <code>
+                df -B G | grep /data |  awk '{print $2}'
               </code>
-              <p>进入目录</p>
+			  
+			  <br />
+			  <p>2.如果 /data 容量不足500G，或者 没有显示容量， 则需要先增加硬盘，然后对硬盘进行分区(参考linux硬盘分区教程).</p>
+			  <p></p>
+
+			  <br />
+              <p>3.进入 /data 目录下载fsvLinux压缩包并解压文件</p>
+              <code>
+<pre>
+cd /data
+yum install wget -y
+wget https://dsw3rxqm9wq1x.cloudfront.net/linux/fsv22.06.01.zip
+unzip fsv22.06.01.zip
+</pre>
+			  </code>
+			 
+              <p>4.进入 /data/fsv 目录</p>
               <code>
                 cd fsv
               </code>
-              <p>增加执行权限</p>
+			  <p></p>
+			  
+			  <br />
+              <p>5.增加执行权限</p>
               <code>
                 chmod u+x op.sh fsv fsv_daemon ipfs chain fs-repo-9-to-10 fs-repo-10-to-11 db/bin/fsv-db
               </code>
-              <p>安装依赖库</p>
+			  <p></p>
+			  
+			  <br />
+              <p>6.安装依赖库</p>
               <code>
                 yum install libaio psmisc -y
               </code>
-              <p>启动程序</p>
+			  <p></p>
+			  
+			  <br />
+              <p>7.启动程序</p>
 
               <code>./op.sh start</code>
-              <p>停止程序</p>
+			  <p></p>
+			  
+			  <br />
+              <p>8.停止程序</p>
               <code>./op.sh stop</code>
-              <p>查看运行日志</p>
+			  <p></p>
+			  
+			  <br />
+              <p>9.查看运行日志</p>
               <code>tail -f daemon.log 或 cat daemon.log</code>
-              <h3>申请POS挖矿</h3>
+			  <p></p>
+			  
+			  <br />
+              <h3>10.申请POS挖矿</h3>
               <code>
                 ./fsv dpos create
               </code><br>
@@ -439,15 +471,17 @@
               <p>注意：</p>
               <p>1.需要等待当前节点的区块同步到最新之后才可以进行操作,不然的话会失败</p>
               
-              <h3>POS 解禁</h3>
+			  <br />
+              <h3>11.POS 解禁</h3>
               <code>./fsv dpos unjail</code>
               <p>之后会提示输入助记词,确认后会发起对当前dpos节点的链上解禁请求。</p>
-              <p>注意：</p>
+              <p><b>注意：</b></p>
               <p>1.助记词必须为dpos节点的创建者</p>
               <p>2.只支持解禁当前dpos节点</p>
               <p>3.需要等待当前节点的区块同步到最新之后才可以进行操作,不然的话会失败</p>
 
-              <h3>查看运行状态</h3>
+			  <br />
+              <h3>12.查看运行状态</h3>
               <code>./fsv status</code>
 
               <code>
@@ -483,18 +517,98 @@
 </pre>
                   </code>
  <h3>安全稳定运行</h3>
-              <p>建议部署Supervisor对fsv的进程进行监控,意外退出后也可以自动重启</p>
-              <p>如果出现以下错误，说明没有安装libaio的库。</p>
+              <p>1.建议部署Supervisor对fsv的进程进行监控,意外退出后也可以自动重启</p>
+			  <br />
+			  
+              <p>2.如果出现以下错误，说明没有安装libaio的库。</p>
               <pre>error while loading shared libraries: libaio.so.1: cannot open shared object file: No such file or directory</pre>
               <p>需要单独运行命令进行安装这个库：</p>
-              <pre>yum install libaio -y</pre>
-              
-              <p>如果出现以下错误，说明没有安装psmisc的库。</p>
+              <code>yum install libaio -y</code>
+              <p></p>
+			  <br />
+              <p>3.如果出现以下错误，说明没有安装psmisc的库。</p>
               <pre>killall command error Please check whether it is installed correctly</pre>
               <p>需要单独运行命令进行安装这个库：</p>
-              <pre>yum install psmisc -y</pre>
+              <code>yum install psmisc -y</code>
             </dd>
           </dl>
+		    <dl>
+            <dt id="fenqu1">2、Linux 硬盘分区教程</dt>
+            <dd>
+			<p>1. 找到未分区的硬盘，注意区分系统硬盘和数据硬盘，红线标记处为硬盘的路径</p>
+			<code>fdisk  -l</code>
+			<img src="./img/diskprt/tp1.png" />
+			
+			<br />
+			<p>2. 使用fdisk进行硬盘分区</p>
+			<code>fdisk [待分区硬盘路径]</code>
+			<p>输入 p  查看分区情况</p>
+			<img src="./img/diskprt/tp2.png" />
+			
+			<br />
+			<p>3. 输入 n 创建分区</p>
+			<img src="./img/diskprt/tp3.png" />
+			
+			<br />
+			<p>4. 输入 p 创建主分区</p>
+			<img src="./img/diskprt/tp4.png" />
+			
+			<br />
+			<p>5. 选择分区号码,这里使用默认值即可,直接按回车enter</p>
+			<img src="./img/diskprt/tp5.png" />
+			
+			<br />
+			<p>6. 选择起始扇区,这里使用默认值即可,直接按回车enter</p>
+			<img src="./img/diskprt/tp6.png" />
+			
+			<br />
+			<p>7. 选择结束扇区,这里使用默认值即可,直接按回车enter，最后输入w进行保存</p>
+			<img src="./img/diskprt/tp7.png" />
+			
+			<br />
+			<p>8. 查看已分区的硬盘路径</p>
+			<code>fdisk -l</code>
+			<img src="./img/diskprt/tp9.png" />
+			<p>第一个红框标记处为硬盘路径</p>
+			<p>第二个红框标记处为分区序号  </p>
+			<p>组合算法为   硬盘路径 + p + 分区序号</p>
+			<p><b>已分区的硬盘路径 :</b> /dev/nvme0n1p1</p>
+			</p>
+			
+			<br />
+			<p>9. 格式化硬盘分区</p>
+			<code>mkfs.ext4  [已分区的硬盘路径]</code>
+			<p></p>
+			
+			<br />
+			<p>10. 创建/data目录</p>
+			<code>mkdir /data</code>
+			<p></p>
+			
+			<br />
+			<p>11. 挂载已分区的硬盘到   /data 路径</p>
+			<code>mount [已分区的硬盘路径] /data</code>
+			<p></p>
+			
+			<br />
+			<p>12. 查看已分区的硬盘挂载情况，如果能看到 /data 已经挂载说明执行成功</p>
+			<code>df -B G | grep data</code>
+			<img src="./img/diskprt/tp10.png" />
+			
+			<br />
+			<p>13. 设置硬盘自动挂载</p>
+			
+			<p>更新下方代码处的 [已分区的硬盘路径] 的位置，替换为实际的值，然后复制下面4行代码到服务器中执行</p>
+			<code>
+			<pre>
+export partition=[已分区的硬盘路径]
+sed -i -e "/\/data/d" /etc/fstab
+echo "${partition}    /data ext4    defaults    0 0" >> /etc/fstab
+cat /etc/fstab
+			</pre>
+			</code>
+			</dd>
+			</dl>
         </div>
 
         <h1 class="help-title  en-show">Open Node Interface Function Description</h1>
