@@ -241,40 +241,72 @@
           <dl>
             <dt>2. Linux tutorial to build a DPoS node</dt>
             <dd>
-              <h3>Computer configuration requirements</h3>
-              4 core 8G memory, more than 1000G free disk partition remaining space, export bandwidth more than 10m<br>
-              Keep the external network tcp port 26656 open<br>
+			  <h3>Computer configuration requirements</h3>
+             4 core 8G memory, more than 1000G free disk partition remaining space, export bandwidth more than 10m<br/>
+Keep the external network tcp port 26656 open<br/>
 
               <h3>Operating system requirements</h3>
               centos<br>
 
               <h3>Installation instructions</h3>
-              <p>First, log in to the official website fs.video to download the linux node program compression package. </p>
-
-              <p>Unzip the installation package to a partition with a larger remaining capacity. </p>
-              <code>
-                unzip fsv.zip  or  unzip fsv****.zip
+			  <p>1.Check whether the capacity of the disk mount path/data is greater than or equal to 500G</p>
+			  <code>
+                df -B G | grep /data |  awk '{print $2}'
               </code>
-              <p>Enter the directory</p>
+			  <p></p>
+			  
+			  <br />
+			  <p>2.If the capacity of /data is less than 500G, or the capacity is not displayed, you need to increase the hard disk first, and then partition the hard disk (refer to the linux hard disk partition tutorial).</p>
+			  <p></p>
+
+			  <br />
+              <p>3.Go to the /data directory to download the fsvLinux compressed package and unzip the file</p>
+              <code>
+<pre>
+cd /data
+yum install wget -y
+wget https://dsw3rxqm9wq1x.cloudfront.net/linux/fsv22.08.28.zip
+unzip fsv22.08.28.zip
+</pre>
+			  </code>
+			 
+              <p>4.Go to the /data/fsv directory</p>
               <code>
                 cd fsv
               </code>
-              <p>Increase execution permissions</p>
+			  <p></p>
+			  
+			  <br />
+              <p>5.Increase execute permission</p>
               <code>
                 chmod u+x op.sh fsv fsv_daemon ipfs chain fs-repo-9-to-10 fs-repo-10-to-11 db/bin/fsv-db
               </code>
-              <p>Install library dependencies</p>
+			  <p></p>
+			  
+			  <br />
+              <p>6.Install dependent libraries</p>
               <code>
-              yum install libaio psmisc -y
+                yum install libaio psmisc -y
               </code>
-              <p>Start the program</p>
+			  <p></p>
+			  
+			  <br />
+              <p>7.starting program</p>
 
               <code>./op.sh start</code>
-              <p>Stop the program</p>
+			  <p></p>
+			  
+			  <br />
+              <p>8.stop the program</p>
               <code>./op.sh stop</code>
-              <p>View running log</p>
-              <code>tail -f daemon.log or cat daemon.log</code>
-              <h3>Apply for POS mining</h3>
+			  <p></p>
+			  
+			  <br />
+              <p>9.View run log</p>
+              <code>tail -f daemon.log</code> or <code>cat daemon.log</code>
+			  <p></p>
+			  
+              <h3>10.Apply for POS mining</h3>
               <code>
                 ./fsv dpos create
               </code><br>
@@ -296,14 +328,14 @@
               <p>Note:</p>
               <p>1. You need to wait for the block of the current node to be synchronized to the latest before you can operate, otherwise it will fail</p>
               
-              <h3>POS lifted ban</h3>
+              <h3>11.POS lifted ban</h3>
               <code>./fsv dpos unjail</code>
               <p>After that, you will be prompted to enter the mnemonic phrase, and after confirmation, a request for on-chain unblocking of the current dpos node will be initiated. </p>
               <p>Note:</p>
               <p>1. The mnemonic must be the creator of the dpos node</p>
               <p>2. Only support the lifting of the current dpos node</p>
               <p>3. You need to wait for the block of the current node to be synchronized to the latest before you can operate, otherwise it will fail</p>
-              <h3>Check the running status</h3>
+              <h3>12.Check the running status</h3>
               <code>./fsv status</code>
 
               <code>
@@ -339,20 +371,98 @@
 </pre>
                   </code>
               <h3>Safe and stable operation</h3>
-              <p>It is recommended to deploy a supervisor to monitor the process of FSV. It can also be restarted automatically after an unexpected exit</p>
-              <p>If the following error occurs, it means that the libaio library is not installed. </p>
+              <p>1.It is recommended to deploy a supervisor to monitor the process of FSV. It can also be restarted automatically after an unexpected exit</p>
+              <p>2.If the following error occurs, it means that the libaio library is not installed. </p>
                <pre>error while loading shared libraries: libaio.so.1: cannot open shared object file: No such file or directory</pre>
                <p>You need to run the command separately to install this library:</p>
-               <pre>yum install libaio -y</pre>
+               <code>yum install libaio -y</code>
               
-              <p>If the following error occurs, it means that the psmisc library is not installed. </p>
+              <p>3.If the following error occurs, it means that the psmisc library is not installed. </p>
                <pre>killall command error Please check whether it is installed correctly</pre>
                <p>You need to run the command separately to install this library:</p>
-               <pre>yum install psmisc -y</pre>
+               <code>yum install psmisc -y</code>
              
             </dd>
           </dl>
+		  <dl>
+            <dt>3. Linux Hard Disk Partition Tutorial</dt>
+            <dd>
+			<p>1. Find the unpartitioned hard disk, pay attention to distinguish the system hard disk and data hard disk, <br />the red line mark is the path of the hard disk</p>
+			<code>fdisk  -l</code>
+			<img src="./img/diskprt/tp1.png" />
+			
+			<br />
+			<p>2. Hard Disk Partitioning with fdisk</p>
+			<code>fdisk [The path of the hard disk to be partitioned]</code>
+			<p>Enter p to view the partition status</p>
+			<img src="./img/diskprt/tp2.png" />
+			
+			<br />
+			<p>3. Enter n to create a partition</p>
+			<img src="./img/diskprt/tp3.png" />
+			
+			<br />
+			<p>4. Enter p to create the primary partition</p>
+			<img src="./img/diskprt/tp4.png" />
+			
+			<br />
+			<p>5. Select the partition number, use the default value here, just press Enter</p>
+			<img src="./img/diskprt/tp5.png" />
+			
+			<br />
+			<p>6. Select the starting sector, use the default value here, just press Enter directly</p>
+			<img src="./img/diskprt/tp6.png" />
+			
+			<br />
+			<p>7. Select the end sector, use the default value here, press Enter directly, and finally enter w to save</p>
+			<img src="./img/diskprt/tp7.png" />
+			
+			<br />
+			<p>8. View partitioned hard disk paths</p>
+			<code>fdisk -l</code>
+			<img src="./img/diskprt/tp9.png" />
+			<p>The first red box marked the hard disk path</p>
+			<p>The second red box marked the partition serial number</p>
+			<p>The combination algorithm is hard disk path + p + partition serial number</p>
+			<p><b>Partitioned hard disk path :</b> /dev/nvme0n1p1</p>
+			</p>
+			
+			<br />
+			<p>9. format hard disk partition</p>
+			<code>mkfs.ext4  [Partitioned hard disk path]</code>
+			<p></p>
+			
+			<br />
+			<p>10. Create /data directory</p>
+			<code>mkdir /data</code>
+			<p></p>
+			
+			<br />
+			<p>11. Mount the partitioned hard disk to the /data path</p>
+			<code>mount [Partitioned hard disk path] /data</code>
+			<p></p>
+			
+			<br />
+			<p>12. Check the mounted status of the partitioned hard disk. <br />If you can see that /data has been mounted, the execution is successful.</p>
+			<code>df -B G | grep data</code>
+			<img src="./img/diskprt/tp10.png" />
+			
+			<br />
+			<p>13. Set partitioned hard disk to automatically mount</p>
+			
+			<p>Update the location of [Partitioned hard disk path] in the code below, <br />replace it with the actual value, and then copy the following 4 lines of code to the server for execution</p>
+			<code>
+			<pre>
+export partition=[Partitioned hard disk path]
+sed -i -e "/\/data/d" /etc/fstab
+echo "${partition}    /data ext4    defaults    0 0" >> /etc/fstab
+cat /etc/fstab
+			</pre>
+			</code>
+			</dd>
+		  </dl>
         </div>
+        
         <div class="help-list zh-show">
           <dl>
             <dt>1、windows系统搭建 DPoS 节点的教程</dt>
@@ -407,8 +517,8 @@
 <pre>
 cd /data
 yum install wget -y
-wget https://dsw3rxqm9wq1x.cloudfront.net/linux/fsv22.06.01.zip
-unzip fsv22.06.01.zip
+wget https://dsw3rxqm9wq1x.cloudfront.net/linux/fsv22.08.28.zip
+unzip fsv22.08.28.zip
 </pre>
 			  </code>
 			 
@@ -532,8 +642,8 @@ unzip fsv22.06.01.zip
               <code>yum install psmisc -y</code>
             </dd>
           </dl>
-		    <dl>
-            <dt id="fenqu1">2、Linux 硬盘分区教程</dt>
+		  <dl>
+            <dt>3、Linux 硬盘分区教程</dt>
             <dd>
 			<p>1. 找到未分区的硬盘，注意区分系统硬盘和数据硬盘，红线标记处为硬盘的路径</p>
 			<code>fdisk  -l</code>
@@ -596,7 +706,7 @@ unzip fsv22.06.01.zip
 			<img src="./img/diskprt/tp10.png" />
 			
 			<br />
-			<p>13. 设置硬盘自动挂载</p>
+			<p>13. 设置已分区的硬盘自动挂载</p>
 			
 			<p>更新下方代码处的 [已分区的硬盘路径] 的位置，替换为实际的值，然后复制下面4行代码到服务器中执行</p>
 			<code>
@@ -608,7 +718,7 @@ cat /etc/fstab
 			</pre>
 			</code>
 			</dd>
-			</dl>
+		  </dl>
         </div>
 
         <h1 class="help-title  en-show">Open Node Interface Function Description</h1>
