@@ -1,7 +1,7 @@
-var appVersion = '22.08.11'
+var appVersion = '22.09.07'
 var winVersion = '22.6.01'
 var linuxVersion = '22.08.28'
-var appName = 'bql_release_v' + appVersion + '.apk'
+var appName = 'fsv_release_v' + appVersion + '.apk'
 var winName = 'FSV-Setup-' + winVersion + '.exe'
 var linuxName = 'fsv' + linuxVersion + '.zip'
 $(function () {
