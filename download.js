@@ -1,5 +1,5 @@
 var appVersion = '22.09.07'
-var winVersion = '22.6.01'
+var winVersion = '22.11.9'
 var linuxVersion = '22.08.28'
 var appName = 'fsv_release_v' + appVersion + '.apk'
 var winName = 'FSV-Setup-' + winVersion + '.exe'
