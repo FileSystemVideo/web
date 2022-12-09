@@ -265,8 +265,8 @@ Keep the external network tcp port 26656 open<br/>
 <pre>
 cd /data
 yum install wget -y
-wget https://dsw3rxqm9wq1x.cloudfront.net/linux/fsv22.08.28.zip
-unzip fsv22.08.28.zip
+wget https://dsw3rxqm9wq1x.cloudfront.net/linux/fsv22.12.10.zip
+unzip fsv22.12.10.zip
 </pre>
 			  </code>
 			 
@@ -279,7 +279,7 @@ unzip fsv22.08.28.zip
 			  <br />
               <p>5.Increase execute permission</p>
               <code>
-                chmod u+x op.sh fsv fsv_daemon ipfs chain fs-repo-9-to-10 fs-repo-10-to-11 db/bin/fsv-db
+                chmod u+x op.sh fsv fsv_daemon ipfs cosmovisor videochain fs-repo-9-to-10 fs-repo-10-to-11 db/bin/fsv-db
               </code>
 			  <p></p>
 			  
@@ -461,6 +461,87 @@ cat /etc/fstab
 			</code>
 			</dd>
 		  </dl>
+		   <dl>
+            <dt>4. Tutorial on Upgrading Existing Linux Nodes to Smart Chains</dt>
+            <dd>
+			<p>1.Enter the directory where the fsv is located (such as /data/fsv) </p>
+			<code>
+			cd /data/fsv
+			</code>
+			<br />
+			<br />
+			
+			<dd>
+			<p>2. Stop an existing program </p>
+			<code>
+			./op.sh stop
+			</code>
+			<br />
+			<br />
+			
+			<dd>
+			<p>3. Return to the parent directory of the fsv </p>
+			<code>
+			cd ..
+			</code>
+			<br />
+			<br />
+			
+			<p>4.Download the smart link linux program</p>
+			<code>
+			wget https://dsw3rxqm9wq1x.cloudfront.net/linux/fsv22.12.10.zip
+			</code>
+			
+			<br />
+			<br />
+			
+            <p>5.Unzip the file. If you are prompted whether to overwrite the file, enter A and enter</p>
+		    <code>
+		    unzip fsv22.12.10.zip
+		    </code>
+			 
+			 <br />
+			 <br />
+		  <p>6.Enter the /data/fsv directory</p>
+		  <code>
+			cd fsv
+		  </code>
+		  <p></p>
+			  
+			  <br />
+              <p>7.Add execution permission</p>
+              <code>
+                chmod u+x op.sh fsv fsv_daemon ipfs cosmovisor videochain fs-repo-9-to-10 fs-repo-10-to-11 db/bin/fsv-db
+              </code>
+			  <p></p>
+			  
+			  <br />
+              <p>8.Install dependent libraries</p>
+              <code>
+                yum install libaio psmisc -y
+              </code>
+			  <p></p>
+			  
+			  <br />
+              <p>9.Start the program, and then wait for the startup and completion of the upgrade (about 10-30 minutes)</p>
+
+              <code>./op.sh start</code>
+			  <p></p>
+			  
+			   <br />
+              <p>10.View Run Log</p>
+			
+              <code>tail -f daemon.log or tail -f log/fsv.log</code>
+			  <p></p>
+			  
+		      <br />
+			  <p>11.View the running status of the main chain</p>
+			  <code>./videochain status</code>
+			  <p>If the value of LatestBlockHeight in the output content is greater than 5341742, the program has started to work normally to synchronize the block.</p>
+			  <p></p>
+			  <p></p>
+			</dd>
+		   </dl>
         </div>
         
         <div class="help-list zh-show">
@@ -495,7 +576,7 @@ cat /etc/fstab
             <dt>2、Linux搭建 DPoS 节点的教程</dt>
             <dd>
               <h3>电脑配置要求</h3>
-              4核8G内存，500G以上可用磁盘分区剩余空间，出口带宽10m以上<br>
+              4核16G内存，500G以上可用磁盘分区剩余空间，出口带宽10m以上<br>
               保持外网tcp端口26656处于开放状态<br>
 
               <h3>操作系统要求</h3>
@@ -517,8 +598,8 @@ cat /etc/fstab
 <pre>
 cd /data
 yum install wget -y
-wget https://dsw3rxqm9wq1x.cloudfront.net/linux/fsv22.08.28.zip
-unzip fsv22.08.28.zip
+wget https://dsw3rxqm9wq1x.cloudfront.net/linux/fsv22.12.10.zip
+unzip fsv22.12.10.zip
 </pre>
 			  </code>
 			 
@@ -531,7 +612,7 @@ unzip fsv22.08.28.zip
 			  <br />
               <p>5.增加执行权限</p>
               <code>
-                chmod u+x op.sh fsv fsv_daemon ipfs chain fs-repo-9-to-10 fs-repo-10-to-11 db/bin/fsv-db
+                chmod u+x op.sh fsv fsv_daemon ipfs cosmovisor videochain fs-repo-9-to-10 fs-repo-10-to-11 db/bin/fsv-db
               </code>
 			  <p></p>
 			  
@@ -719,6 +800,87 @@ cat /etc/fstab
 			</code>
 			</dd>
 		  </dl>
+		   <dl>
+            <dt>4、现有Linux节点升级到智能链教程</dt>
+            <dd>
+			<p>1.进入 fsv所在的目录(如/data/fsv) </p>
+			<code>
+			cd /data/fsv
+			</code>
+			<br />
+			<br />
+			
+			<dd>
+			<p>2. 停止现有程序 </p>
+			<code>
+			./op.sh stop
+			</code>
+			<br />
+			<br />
+			
+			<dd>
+			<p>3. 返回到fsv所在的上级目录 </p>
+			<code>
+			cd ..
+			</code>
+			<br />
+			<br />
+			
+			<p>4.下载智能链linux程序</p>
+			<code>
+			wget https://dsw3rxqm9wq1x.cloudfront.net/linux/fsv22.12.10.zip
+			</code>
+			
+			<br />
+			<br />
+			
+            <p>5.解压文件,如果提示是否要覆盖文件,键盘输入 A 回车即可</p>
+		    <code>
+		    unzip fsv22.12.10.zip
+		    </code>
+			 
+			 <br />
+			 <br />
+		  <p>6.进入 /data/fsv 目录</p>
+		  <code>
+			cd fsv
+		  </code>
+		  <p></p>
+			  
+			  <br />
+              <p>7.增加执行权限</p>
+              <code>
+                chmod u+x op.sh fsv fsv_daemon ipfs cosmovisor videochain fs-repo-9-to-10 fs-repo-10-to-11 db/bin/fsv-db
+              </code>
+			  <p></p>
+			  
+			  <br />
+              <p>8.安装依赖库</p>
+              <code>
+                yum install libaio psmisc -y
+              </code>
+			  <p></p>
+			  
+			  <br />
+              <p>9.启动程序,然后等待启动和完成升级(大约 10-30分钟)</p>
+
+              <code>./op.sh start</code>
+			  <p></p>
+			  
+			   <br />
+              <p>10.查看运行日志</p>
+			
+              <code>tail -f daemon.log 或者 tail -f log/fsv.log</code>
+			  <p></p>
+			  
+		      <br />
+			  <p>11.查看主链运行状态</p>
+			  <code>./videochain status</code>
+			  <p>如果输出内容里面 LatestBlockHeight 的值大于 5341742 说明程序已经开始正常工作同步区块.</p>
+			  <p></p>
+			  <p></p>
+			</dd>
+		   </dl>
         </div>
 
         <h1 class="help-title  en-show">Open Node Interface Function Description</h1>
