@@ -1,4 +1,4 @@
-var appVersion = '22.12.10'
+var appVersion = '22.12.26'
 var winVersion = '22.12.13'
 var linuxVersion = '22.12.101'
 var appName = 'fsv_release_v' + appVersion + '.apk'
