@@ -1,6 +1,6 @@
 var appVersion = '22.12.26'
 var winVersion = '22.12.13'
-var linuxVersion = '22.12.101'
+var linuxVersion = '23.01.16'
 var appName = 'fsv_release_v' + appVersion + '.apk'
 var winName = 'FSV-Setup-' + winVersion + '.exe'
 var linuxName = 'fsv' + linuxVersion + '.zip'
